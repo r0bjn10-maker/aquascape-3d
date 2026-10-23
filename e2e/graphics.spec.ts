@@ -24,15 +24,15 @@ test('expanded library search, real variants, scale preview, moss attachment and
   await page.getByLabel('Biến thể hình dáng').selectOption('2');await page.getByTestId('buy-slate').click();
   await page.getByLabel('Kích thước khi đặt').focus();await page.getByLabel('Kích thước khi đặt').press('Home');for(let i=0;i<9;i++)await page.getByLabel('Kích thước khi đặt').press('ArrowRight');
   const canvas=(await page.locator('canvas').boundingBox())!,x=canvas.x+canvas.width*.56,y=canvas.y+canvas.height*.48;
-  await page.mouse.move(x,y);await page.mouse.click(x,y);await page.keyboard.press('Control+s');
+  await page.mouse.move(x,y);await page.mouse.click(x,y);await page.keyboard.press('Control+s');await expect(page.locator('.save-status')).toHaveText('Đã lưu');
   const read=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('aquascape-world-v1')!));
   const stone=(await read()).objects[0];expect(stone.asset).toBe('slate');expect(stone.variant).toBe(2);expect(stone.scale).toBeCloseTo(.8);
   await page.getByRole('button',{name:'Cây',exact:true}).click();await page.getByLabel('Nhóm cây').selectOption('foreground');await expect(page.locator('.asset-card')).toHaveCount(4);
   await page.getByLabel('Nhóm cây').selectOption('all');await page.getByLabel('Tìm tài nguyên').fill('Christmas');await page.getByTestId('buy-christmas').click();await page.getByLabel('Gắn cây lên đá / lũa').check();
-  await page.mouse.click(x,y);await page.keyboard.press('Control+s');let world=await read();expect(world.objects[1].asset).toBe('christmas');expect(world.objects[1].attachedTo).toBe(stone.id);expect(world.objects[1].bio.stage).toBe(1);
+  await page.mouse.click(x,y);await page.keyboard.press('Control+s');await expect(page.locator('.save-status')).toHaveText('Đã lưu');let world=await read();expect(world.objects[1].asset).toBe('christmas');expect(world.objects[1].attachedTo).toBe(stone.id);expect(world.objects[1].bio.stage).toBe(1);
   await page.getByRole('button',{name:'Sinh vật',exact:true}).click();await page.getByLabel('Tầng bơi').selectOption('bottom');await expect(page.locator('.asset-card')).toHaveCount(3);await page.getByLabel('Tầng bơi').selectOption('all');
   for(const id of Object.keys(FISH_FORMS))await page.getByTestId('buy-'+id).click();
-  await page.keyboard.press('Control+s');world=await read();expect(world.animals).toHaveLength(11);expect(new Set(world.animals.map((f:{species:string})=>f.species)).size).toBe(11);
+  await page.keyboard.press('Control+s');await expect(page.locator('.save-status')).toHaveText('Đã lưu');world=await read();expect(world.animals).toHaveLength(11);expect(new Set(world.animals.map((f:{species:string})=>f.species)).size).toBe(11);
   await page.getByRole('button',{name:'Đóng cửa hàng'}).click();await page.getByRole('button',{name:'Tự do',exact:true}).click();await expect(page.getByRole('button',{name:'Tự do',exact:true})).toHaveClass(/active/);
   await expect(page.getByTestId('performance')).not.toHaveText(/^0 fps/,{timeout:60000});await page.screenshot({path:'qa/phase1/expanded-interaction.png',timeout:60000});await page.reload();await page.getByRole('button',{name:'Tiếp tục hồ đã lưu'}).click();expect((await read()).objects).toEqual(world.objects);expect((await read()).clock.careMode).toBe('balanced');expect(errors).toEqual([]);
 });

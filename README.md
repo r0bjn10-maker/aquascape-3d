@@ -1,10 +1,14 @@
-# AQUASCAPE 3D — Living Ecosystem 2.2 — Graphics Phase 1
+# AQUASCAPE 3D — Living Ecosystem 2.3 — Cloud Save & Sync
 
 **Chơi trực tiếp:** https://r0bjn10-maker.github.io/aquascape-3d/ — chọn “Khám phá hồ mẫu” để bắt đầu. Bản web đã được xuất bản và kiểm tra thao tác cảm ứng, lưu và tải lại hồ trên viewport điện thoại 390×844.
 
 Bản nâng cấp đồ họa của game hồ thủy sinh hiện có: 5 preset ánh sáng, kính trước bật/tắt riêng, mặt nước gợn, nền có color/normal/roughness maps, 4 chế độ camera, thư viện tìm kiếm và ghost theo kích thước. Có 10 loài cá + tép Cherry, 15 cây, 6 đá × 3 biến thể và 5 lũa × 3 biến thể. **Toàn bộ artwork hiện là procedural fallback tự tạo; chưa có model GLB chuyên nghiệp/final art.**
 
-Bản mở rộng trực tiếp của game hồ thủy sinh hiện có. Builder, terrain, camera, cá bơi, cây instanced, cửa hàng và save JSON vẫn được giữ. **Living 1:1 + Balanced là mặc định.** Không backend, tài khoản, quảng cáo hay ứng dụng chạy ngầm.
+Bản mở rộng trực tiếp của game hồ thủy sinh hiện có. Builder, terrain, camera, cá bơi, cây instanced, cửa hàng và save JSON vẫn được giữ. **Living 1:1 + Balanced là mặc định.** Có thể chơi cục bộ không tài khoản; Supabase là tùy chọn cho đồng bộ qua Internet. Không có quảng cáo hay ứng dụng chạy ngầm.
+
+## Cloud Save & Sync
+
+Bản 2.3 chuyển bộ lưu offline sang IndexedDB, nhập save cũ và thêm Supabase Auth + CAS sync. Mở Menu → Cloud Save để cấu hình/đăng nhập. **Cần chủ project tạo Supabase và chạy SQL trước khi có đồng bộ thật.** [Hướng dẫn cấu hình, bảo mật và xung đột](CLOUD_SAVE_GUIDE.md). Chơi offline vẫn hoạt động nếu chưa cấu hình.
 
 ## Chạy game
 
@@ -48,11 +52,11 @@ Máy cho ăn có lịch, phần/lần và kho hữu hạn. Hồ mẫu có sẵn 
 
 Save schema 2 dùng cùng khóa cũ `aquascape-world-v1`. Khi nâng từ 0.1, giữ bố cục, tiền, growth và thiết bị; vì save cũ không có UTC nên chỉ bắt đầu real-time tại lúc chuyển đổi, không cộng hồi tố những ngày không có dữ liệu. Không diễn giải “ngày tăng tốc” cũ thành nhiều ngày thực.
 
-Autosave sau chỉnh sửa khoảng 0,7 giây, mỗi 10 giây và khi ẩn/rời trang. Primary JSON được ghi atomic, có checkpoint hợp lệ và revision để phát hiện xung đột. Một tab giữ Web Lock quyền ghi; tab thứ hai chỉ xem/xuất. Đóng tab chủ rồi tải lại tab kia để tiếp quản. Trình duyệt không hỗ trợ Web Locks hoặc chặn storage sẽ không được ghi tự động; dùng JSON export để giữ dữ liệu.
+Autosave sau chỉnh sửa khoảng 0,7 giây, mỗi 10 giây và khi ẩn/rời trang. Primary/checkpoint/metadata được ghi atomic trong IndexedDB; cloud có version CAS riêng. localStorage giữ mirror tương thích, không còn là bộ lưu chính. Một tab giữ Web Lock quyền ghi; tab thứ hai chỉ xem/xuất. Đóng tab chủ rồi tải lại tab kia để tiếp quản. Trình duyệt không hỗ trợ Web Locks hoặc chặn storage sẽ không được ghi tự động; dùng JSON export để giữ dữ liệu.
 
 Không double-count khi reload. Đồng hồ lùi giữ mốc UTC cũ. Nhảy đồng hồ bất thường trong phiên được đánh dấu; chênh lệch offline trên 366 ngày không tự xử lý. Menu giải thích và cho chọn xử lý từng khoảng tối đa 366 ngày hoặc dùng giờ hiện tại và bỏ khoảng nghi ngờ. Không âm thầm bỏ phần thời gian thừa. Đây không phải đồng hồ chống gian lận có server xác thực.
 
-Dữ liệu là cục bộ theo origin trình duyệt (giao thức/host/cổng), không có cloud sync. Nên xuất JSON trước khi đổi máy, cổng hoặc xóa dữ liệu web.
+Khi chơi cục bộ, dữ liệu riêng theo origin trình duyệt (giao thức/host/cổng). Khi đã cấu hình và đăng nhập Supabase, hồ được đồng bộ theo tài khoản; chờ “Đã đồng bộ” trước khi chuyển máy. Nên xuất JSON trước khi đổi máy, cổng hoặc xóa dữ liệu web.
 
 ## Kiểm tra, build và deploy
 
@@ -77,6 +81,6 @@ AQUASCAPE_PRODUCTION=1 PW_TEST_SCREENSHOT_NO_FONTS_READY=1 npm run test:e2e -- e
 
 PWA cache tài nguyên build sau lần tải đủ. Để nhận bản nâng cấp đã cài, đóng các tab game rồi mở lại để worker mới kích hoạt; xuất save dự phòng trước khi xóa cache. `base: './'` hỗ trợ GitHub Pages subpath. Repository công khai `r0bjn10-maker/aquascape-3d` dùng nhánh `main` chứa source Aquascape độc lập, nhánh `gh-pages` chứa nội dung `dist/` để xuất bản ở thư mục `/`. Sau khi sửa source, chạy đủ checks, build rồi cập nhật nhánh `gh-pages` bằng nội dung dist; GitHub Pages triển khai nhánh này. Đẩy source lên `main` đơn lẻ không thay bản đang chơi. Không yêu cầu backend hoặc workflow riêng.
 
-[Tài liệu thiết kế](GAME_DESIGN.md) · [Kiến trúc](ARCHITECTURE.md) · [Asset](ASSET_GUIDE.md) · [QA](QA_REPORT.md) · [Changelog](CHANGELOG.md)
+[Tài liệu thiết kế](GAME_DESIGN.md) · [Kiến trúc](ARCHITECTURE.md) · [Asset](ASSET_GUIDE.md) · [QA](QA_REPORT.md) · [Cloud setup](CLOUD_SAVE_GUIDE.md) · [Changelog](CHANGELOG.md)
 
-Bản 2.2 đã qua typecheck, lint, 93 unit tests, 17 browser workflows (16 dev + 1 production/PWA) và production build; bản công khai đạt kiểm tra ở 5 cỡ màn hình. Báo cáo kiểm thử trình duyệt, PWA, đo tài nguyên và giới hạn phần cứng: [QA_REPORT.md](QA_REPORT.md). Kết quả QC 2.1 trước đây nằm trong QC_REPORT.md và QA_REPORT_V21_HISTORY.md, không thay thế kết quả bản 2.2.
+Bản 2.3: 117 unit/integration tests, 21 luồng browser dev và 1 production/PWA workflow được kiểm tra; kết quả cuối/hash/xuất bản trong [QA_REPORT.md](QA_REPORT.md) và `qa/cloud/release.json`. Auth/HTTP cloud dùng mock với SDK thật; RLS/SQL chạy PostgreSQL nhúng. Cần cấu hình Supabase thật theo CLOUD_SAVE_GUIDE.md để bật đồng bộ qua Internet. Kết quả đồ họa 2.2 trước đây lưu trong QA_REPORT_V22_HISTORY.md.

@@ -35,7 +35,7 @@ try{
       await page.getByRole('button',{name:'Khám phá hồ mẫu',exact:false}).tap({timeout:15000});
       await expect(page.getByTestId('performance')).not.toHaveText(/^0 fps/,{timeout:60000});
       checks.push('welcome reachable and WebGL renders');
-      const save=async()=>{await page.getByRole('button',{name:'Menu và cài đặt'}).tap();await page.getByRole('button',{name:'Lưu hồ',exact:true}).tap();return page.evaluate(()=>JSON.parse(localStorage.getItem('aquascape-world-v1')));};
+      const save=async()=>{await page.getByRole('button',{name:'Menu và cài đặt'}).tap();await page.getByRole('button',{name:'Lưu hồ',exact:true}).tap();await expect(page.getByRole('dialog',{name:'Menu hồ'})).toHaveCount(0);return page.evaluate(()=>JSON.parse(localStorage.getItem('aquascape-world-v1')));};
       const before=await save();expect(before.objects.length).toBeGreaterThan(0);
       await page.getByRole('button',{name:'Chăm sóc',exact:true}).tap();
       await page.getByRole('button',{name:'Cho ăn',exact:false}).tap();

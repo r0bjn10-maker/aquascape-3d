@@ -1,65 +1,55 @@
-# AQUASCAPE 3D 2.2 — Graphics Phase 1 QA
+# AQUASCAPE 3D 2.3 — Cloud Save & Sync QA
 
-Ngày kiểm tra: 2026-10-23 UTC. Nâng cấp trực tiếp React/Three/R3F hiện có; không đổi framework, không tạo game khác. Báo cáo 2.1 lưu riêng tại QA_REPORT_V21_HISTORY.md và QC_REPORT.md. Kết quả bên dưới thuộc code 2.2.
+## Phạm vi và trạng thái
 
-## Kết quả build và test
+Nâng cấp trực tiếp 2.2; không đổi framework, schema World vẫn 2. IndexedDB thay localStorage làm nguồn offline chính, có migration giữ save cũ. Supabase Auth + CAS/versioning + backup là lớp cloud tùy chọn. Living 1:1 + Balanced giữ mặc định.
 
-- TypeScript, ESLint và production build: đạt. Build precache 72 tài nguyên ~1.87 MiB; JS chính 1.27 MB trước gzip / ~367 KB gzip. Cảnh và dữ liệu hoạt động không cần tải asset bên ngoài.
-- 93/93 unit tests đạt: 65 hồi quy + 28 graphics/assets/biology/capacity/collision/save tests mới. Test cả 15 hình lá, 11 sinh vật khác hình, 33 hardscape variants, finite geometry, kích thước chuẩn hóa, seeded maps, stage morphology, placement/save tất cả asset, 2 ngày biology mọi loài, corrupt import và hồ mẫu schema 2 cũ.
-- 16/16 browser workflows phát triển và 1/1 production PWA workflow đạt (17 luồng khác nhau). Dense cleanup test được chạy thêm sau khi đổi sang snapshot telemetry cùng một thời điểm và chờ đúng cảnh render; lượt này cũng đạt. Không tính lượt chạy thêm thành một workflow mới. Kết quả/hash xuất bản nằm trong `qa/phase1/release.json`.
+Project Supabase thật chưa được cấp trong môi trường. **Không tuyên bố đã cấu hình database production, gửi email thật hoặc kiểm thử thiết bị vật lý.** [CLOUD_SAVE_GUIDE.md](CLOUD_SAVE_GUIDE.md) ghi đầy đủ SQL/SMTP/redirect/public config cần chủ game thực hiện. Bản game vẫn chơi cục bộ khi chưa kết nối.
 
-## Ma trận kiểm thử
+## Kiểm tra đã thực hiện
 
-| Phạm vi | Kiểm tra thực tế / giới hạn |
+TypeScript, ESLint, 117/117 unit/integration tests và production build đã đạt. 21 luồng browser dev đã đạt qua bộ suite và các lượt chạy lại có mục tiêu sau sửa; các lỗi quan sát ban đầu đều đã được xử lý. Production/PWA đã đạt trên build cuối (22 luồng khác nhau tổng cộng); public smoke ghi riêng trong `qa/cloud/release.json`. Không tính test bị skip hoặc lượt chạy lại thành workflow mới.
+
+| Phạm vi | Bằng chứng |
 |---|---|
-| Kính/nước/ánh sáng | 5 lighting presets, front-glass persistence, 3 quality levels render không shader error; camera front/quarter/top/free; ảnh cảnh thật trong qa/phase1 và qa |
-| Đá/lũa | 6 × 3 đá + 5 × 3 lũa khác geometry/nhánh; bounds nằm trong placement envelope; chọn biến thể/scale thật qua UI, di chuyển/xoay/xóa/undo qua builder test |
-| Cây | 15 profile lá/layout có signature khác nhau, growth nhiều stage và foliage instancing; foreground/midground/background/moss filter; moss gắn stone, variant/attachedTo giữ sau reload |
-| Cá/tép | 10 cá và tép riêng hình, body/tail/fin/marks; đủ 11 species mua từ UI; 6.000 bước movement + isolated/overlapping stone tests; speed/zone/schooling theo profile |
-| Catalog | 42 registry entries, 64 WebP local HTTP200/RIFF, fallback status rõ; tìm slate/Christmas, nhóm cây/tầng bơi, ghost scale |
-| Save | Hồ cũ schema2 parse/roundtrip đúng 74 vật thể/Balanced; variant/appearance tùy chọn; import mới, reload, checkpoint, tab lock, migration và preview isolation qua hồi quy |
-| Tương tác | Terrain/brush, drag, scale/rotate/duplicate/delete/undo/redo/save, chạm tablet/phone, 4 viewport thấp/ngang qua responsive tests |
-| Tải model lỗi | Ép URL GLB không tồn tại tại runtime; fallback vẫn hiển thị và không hỏng scene. Test route nhận cả query Vite `?t=` |
-| Hồ dày/cleanup | Import/reset 2 chu kỳ: 45 cụm cây, 7 hardscape, 66 cá/tép. Renderer.info trở về baseline sau cleanup; chi tiết `qa/phase1/resource-cleanup.json` |
-| Offline PWA | Test riêng bản production ở `/aquascape-3d/`, service worker control, ngắt mạng/reload/tiếp tục, layout không mất |
-| Public | Đạt 5/5: 390×844, 360×640, 844×390, 640×360, 1280×900. HTML khớp build, WebGL, chăm sóc, save/JSON export/import/reload, không page error/HTTP lỗi/overflow. TLS xác minh; service workers chặn ở smoke này |
+| Offline journal | IndexedDB thật trên browser, fake-indexeddb ở unit; migration legacy không cấp thêm thời gian; atomic primary/checkpoint; abort giữ dữ liệu; stale writer bị chặn; corrupt primary recover; IDB ưu tiên hơn mirror cũ |
+| Cross-device | 3 kho độc lập chuyển toàn bộ layout, terrain, equipment, coins, plant/fish IDs và progression; Chromium profiles mô phỏng Windows/iPhone/iPad, không thiết bị vật lý |
+| Cloud CAS | Một winner cho cùng base; nhánh người chơi thua giữ local và báo conflict; không last-write-wins, không merge coins/time |
+| Idempotency | HTTP response bị hủy sau server commit; exact pending ID/snapshot giữ trong IndexedDB qua reload/đăng nhập lại, retry không tạo lần ghi trùng |
+| Race | Edit trong lúc pull; edit sau pending/lost ACK; auth đổi trong request; linked save không gửi sang tài khoản khác; ACK chỉ xóa dirty của snapshot đã được nhận |
+| Time | Canonical high-water mark, rebase nhánh chỉ tiến thời gian, không cộng hai catch-up; stale time-only pending có thể retry từ canonical; server reject UTC lùi/future >5 phút |
+| Auth | SDK thật, magic link PKCE + callback, persist sau reload, signout/relogin và email OTP dự phòng; refresh khi session cached hết hạn; callback tab mới giữ tab chơi là writer |
+| RLS/SQL | Migration thực thi trên PGlite/PostgreSQL: UID riêng, SELECT bị lọc; INSERT/UPDATE trực tiếp bị revoke; anon không gọi RPC; request ledger không đọc trực tiếp; SECURITY DEFINER có actor check/search_path rỗng |
+| Backup | 10 local trước thay thế/import/restore và checkpoint; 20 cloud versions; tải JSON; phục hồi local tách sync; SHA256 receipt và 100 request retention |
+| Payload/keys | Schema whitelist giữ toàn bộ World known fields, bỏ unknown model/texture blobs; public/anon key hợp lệ, reject secret/service-role và HTTP remote; build cũng validate cấu hình |
+| Regression | Builder/terrain/transform/history, plants/fish assets/quality, care/preview/UTC, schema1 migration, corrupt primary recovery, exclusive tabs, touch/responsive, PWA subpath/offline |
 
-## Đo hiệu năng và tài nguyên
+## Mô hình môi trường kiểm thử
 
-`qa/performance.json`: số đo production Low, renderer/viewport/user-agent và 4 mẫu frame thực. `qa/phase1/resource-cleanup.json`: số geometry/textures và calls/triangles/FPS của dense/cleared cảnh qua 2 chu kỳ. `qa/offline-benchmark-v21.json`: benchmark CPU kernel hồi quy vẫn dùng cùng biology; số mới được ghi bởi unit suite.
+Unit/integration dùng Node, fake-indexeddb và PostgreSQL nhúng PGlite (SQL thật). Auth.uid trong SQL tests đọc JWT claim giả lập, không tự chứng nhận chữ ký Supabase. Browser dùng Supabase JS SDK thật với HTTP Auth/PostgREST fake tại `aquascape-test.supabase.co`, không gửi request ra project thật; route mô phỏng CAS/receipt và sự cố response. Không thay engine/journal thật bằng mock. RLS kiểm tra ở SQL suite riêng, không suy từ HTTP mock ra bảo mật production.
 
-Production Low 1280×900: 6–7 FPS, 51 calls, 78.108 triangles, 3 textures; đây là software rendering. Dense 45 cây/7 hardscape/66 sinh vật: 83 calls, 111.864 triangles; 29 → 73 → 29 geometries và 3 textures qua cả hai chu kỳ import/reset. Snapshot từng cảnh đọc thống nhất và chờ renderer đổi đúng scene. Cloud dùng ANGLE/SwiftShader software WebGL, không có GPU điện thoại. Cảnh dense có thể chậm rõ khi compile shader ban đầu. Không suy từ kết quả cloud thành 60 FPS desktop/30 FPS mobile; hai mục tiêu này **chưa được xác nhận trên thiết bị thật**. Renderer.info.memory.geometries/textures là số resource đang theo dõi, không phải VRAM byte hay phép đo mọi loại memory leak.
+Live/public smoke chỉ xác nhận bản phát hành không cấu hình cloud vẫn mở, lưu/import/export và giữ layout trên 5 viewport. Email deliverability, Auth rate limits, redirect thực tế, RLS giữa hai user Supabase thật, Safari/Edge và mạng/thiết bị vật lý cần được xác nhận sau khi project được cấu hình.
 
-Low đã giảm DPR và topology lá/cá, bỏ shadow/PMREM/caustics, dùng kính basic; Medium/High có phản chiếu và bóng. Auto giảm xuống Low khi nhiều mẫu dưới 25fps. Vẫn giữ builder/camera/touch. Screenshot kiểm thử có thể hiển thị frame compile chậm; xem samples ổn định trong report thay vì coi một ảnh là benchmark.
+## Những lỗi đã sửa trong quá trình QA
 
-## Bằng chứng hình ảnh
+- Nút “Tiếp tục hồ đã lưu” trước đây phụ thuộc `saved` nên biến mất khi live tick đánh dấu dirty. Thêm `hasSavedWorld` để nút dựa trên sự tồn tại của save, độc lập autosave.
+- Trạng thái Đã đồng bộ cũ có thể còn hiện trong khoảng manual sync đang bắt đầu hoặc sau edit. Đánh dấu Đang đồng bộ ngay khi yêu cầu/chỉnh sửa, tránh đổi máy dựa trên kết quả cũ.
+- Magic link thường mở tab mới. Tab chỉ xem vẫn khởi tạo Auth/đổi mã; chỉ tab giữ writer lock mới có coordinator ghi hồ. Session qua SDK chia sẻ sang tab chơi.
+- Lượt test gửi email phải chờ SDK báo gửi thành công trước khi điều hướng callback; nếu rời trang khi request đang chạy có thể hủy PKCE request. Test JWT dùng base64url đúng định dạng và expiry cố định.
+- So sánh bố cục giữa máy dùng trường layout, đồng thời kiểm tra progression theo thời gian thực; không yêu cầu cây đứng yên khi game Living tiếp tục tăng trưởng.
+- Lưu thủ công luôn chụp cả pose cá hiện tại, hiển thị trạng thái đang lưu trước khi commit async; không bỏ qua chỉ vì chưa có biological tick. Export historical backup dùng snapshot gốc, không chép pose live vào bản lịch sử.
+- Browser regression fixtures được chuyển sang IndexedDB để thực sự kiểm tra nguồn lưu mới; chỉnh mirror localStorage không còn thay hồ. Test lưu chờ xác nhận commit async thay vì coi keypress là commit hoàn tất.
 
-`qa/phase1/showcase-medium.png` chụp scene nhiều loài ở Medium; `catalog-phone.png` chụp thư viện trên viewport 390×844 sau khi ảnh giải mã đầy đủ; cấu hình và lỗi console nằm trong `screenshots.json`. Ảnh chụp browser thật, không dùng ảnh quảng cáo/render bên ngoài: `lighting-daylight/warm/cool/evening/night.png`, `expanded-interaction.png`, `dense-scene.png` trong `qa/phase1`; ảnh camera, builder, touch và production ở `qa/`. Preview catalog là ảnh raster hóa chính geometry trong mã, không được dùng thay screenshot game. Các ảnh mới có thể khác số đo lịch sử 2.1 do đổi geometry/LOD và giờ đèn thực tế.
+## Giới hạn còn lại
 
-## Trạng thái artwork và giới hạn còn lại
+Một tài khoản đồng bộ một hồ đang chơi. Không có live multi-user editing, field merge, server biology hay chống gian lận đầy đủ. Thay đổi có chủ ý trên hai nhánh cần người chơi chọn bản. Các write được CAS và clock guard bảo vệ nhưng biology offline vẫn chạy trên thiết bị. Không bảo đảm upload sau khi app đã bị OS đóng; chờ Đã đồng bộ trước khi đổi máy. Checkpoint và autosave không bảo đảm giữ edit chưa commit nếu OS kill trong khoảng debounce/10s. Backup trong cùng project/browser không thay bản export độc lập.
 
-- **0 final professional assets; 42 procedural fallback; 0 mục chỉ thêm tên.** 10 cá + tép có hình học khác nhau; 15 cây có shape/layout riêng. Tất cả `model:null` là chủ ý. Registry/ASSET_GUIDE.md liệt kê từng asset và ngân sách. Chưa kèm GLB được model/rig bởi artist, chưa có pipeline cá GLB/skinned animation.
-- Kính dùng transparency/ordering xấp xỉ; không ray tracing/refraction vật lý. Preview thiết bị là khối minh họa; các model thiết bị giữ renderer cũ. Lá/gỗ/đá procedural chưa đạt độ thực ảnh chụp hoặc morphology nghiên cứu thực vật. Chưa có whole-body skinning cho cá, vây đuôi dùng geometry/rotation.
-- Fish chống xuyên kính/hardscape bằng envelope + projection, không phải triangle collider. Envelope lũa bảo thủ khiến cá tránh cả khoảng rỗng. Chưa mô phỏng lãnh thổ Betta/tương thích loài đầy đủ, không phải hướng dẫn nuôi cá thật.
-- Giữ hạn chế engine trước: biology là chỉ số game, không ppm/mg/L; catch-up CPU đồng bộ có thể giữ UI vài giây; Web Locks cần để ghi; không cloud sync/sinh sản. Save cũ/schema2/UTC/care mode được giữ. Cụm con cây vẫn thuộc mẹ.
-- Đã chạy Chromium touch emulation; chưa có iPhone/Android/iPad vật lý hoặc Safari/Windows thực. Cần thiết bị thật để xác nhận FPS và tương thích iOS. Không có credential/deployment blocker trong phạm vi đã kiểm tra.
+117 tests không chứng minh mọi Safari/iOS/Windows version tương thích; cloud software WebGL không chứng nhận 30/60 FPS. Artwork vẫn procedural fallback như 2.2; không có GLB chuyên nghiệp mới. Báo cáo đồ họa trước: QA_REPORT_V22_HISTORY.md.
 
-## Tái lập
+## Chạy lại
 
-```sh
-npm ci
-npm run typecheck
-npm run lint
-npm test
-npm run build
-PW_TEST_SCREENSHOT_NO_FONTS_READY=1 npm run test:e2e -- --grep-invert production
-# Giữ preview server ở terminal khác:
-npm run preview -- --port 4173 --strictPort --base=/aquascape-3d/
-AQUASCAPE_PRODUCTION=1 PW_TEST_SCREENSHOT_NO_FONTS_READY=1 npm run test:e2e -- e2e/production.spec.ts
-```
+Xem CLOUD_SAVE_GUIDE.md và package scripts. Dev workflows: `PW_TEST_SCREENSHOT_NO_FONTS_READY=1 npm run test:e2e -- --grep-invert production`. Production/PWA phải chạy riêng với `AQUASCAPE_PRODUCTION=1` và preview server cổng 4173/subpath `/aquascape-3d/`. Public smoke dùng scripts/qc-public.mjs với xác minh TLS; không kiểm tra live cloud backend nếu chưa có cấu hình.
 
-Chromium: `/usr/bin/chromium` hoặc `CHROMIUM_PATH`. Public QC: `node scripts/qc-public.mjs` sau deploy; cloud proxy CA phải được Node tin cậy qua `NODE_EXTRA_CA_CERTS`, script vẫn xác minh TLS. Live smoke chặn service workers để đối chiếu đúng build; offline PWA được kiểm tra riêng trên production local.
+## Xuất bản và kiểm tra link thật
 
-## Xuất bản bản 2.2
-
-GitHub Pages deployment [39877643642](https://github.com/r0bjn10-maker/aquascape-3d/actions/runs/39877643642) thành công, build commit `7c439eea47612c3ab9e35ce2e85b988bf40e9d29`. [Chơi trực tiếp](https://r0bjn10-maker.github.io/aquascape-3d/). Public smoke 5/5 đạt trên đúng HTML build; chi tiết request/check/ảnh và JSON xuất thử nằm tại `qa/phase1/public/`. PWA đã kiểm tra riêng bằng production local khi offline; không tuyên bố live service worker đã được smoke kiểm tra. Source Aquascape độc lập được bàn giao trên nhánh main, compiled web trên gh-pages.
+[GitHub Pages run 39899471162](https://github.com/r0bjn10-maker/aquascape-3d/actions/runs/39899471162) thành công; web commit `210131150500414d6f6dbb99c87bead75c32f2a0`. Public smoke 5/5 đạt: 390×844, 360×640, 844×390, 640×360 và 1280×900. HTML khớp build cuối; WebGL, thao tác chăm sóc, lưu, JSON export/import và reload giữ bố cục; không page error/HTTP lỗi/tràn ngang. Dùng TLS xác minh qua CA của nền tảng; service workers chặn trong public smoke, PWA offline được kiểm tra riêng trên production local. Xem `qa/cloud/public/results.json` và ảnh thật cùng thư mục. Bản live không có project Supabase mặc định; người chơi có thể nhập cấu hình công khai trong Cloud Save sau khi chủ project chạy SQL/Auth setup.

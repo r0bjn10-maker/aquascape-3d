@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.0 — Cross-Device Cloud Save & Sync
+
+Thêm IndexedDB primary/checkpoint/pending journal và migration schema1/2 từ localStorage. Tích hợp Supabase Auth magic link/PKCE + email code, session persistence/refresh, RLS/CAS RPC và request idempotency. Auto-sync theo edit, reconnect/focus/foreground và polling; conflict giữ nhánh local, backup trước tải cloud, JSON export/import, phục hồi local và tải cloud backups. Tất cả asset vẫn tham chiếu ID, không upload model. Giữ engine real-time/Balanced và framework. Project Supabase/SMTP/redirect URLs cần chủ game cấu hình; xem CLOUD_SAVE_GUIDE.md.
+
+
 ## 2.2.0 — Graphics Phase 1 — 2026-10-23
 
 Nâng cấp trực tiếp renderer và thư viện, giữ framework, builder, schema 2, ID/save cũ và Living 1:1 + Balanced.

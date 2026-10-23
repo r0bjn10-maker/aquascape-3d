@@ -1,28 +1,29 @@
 {
-  "version": "2.2.0",
+  "version": "2.3.0",
   "schema": 2,
-  "sourceSha256": "924a11340cc17dcaafe57b5bf94f67f573dc9727c279fe2e564073cbb512d40c",
+  "sourceSha256": "4a29e2b6d5098f19a565baab6c51077bc3256d11fa75ab39cf7e2523192ac995",
+  "sourceHashMethod": "SHA256 of compact JSON mapping sorted source/config/test/SQL paths to their SHA256 digests; no credentials",
   "unitTests": {
-    "passed": 93,
+    "passed": 117,
     "failed": 0
   },
   "browserTests": {
-    "developmentPassed": 16,
+    "developmentPassed": 21,
     "productionPassed": 1,
-    "failed": 0,
+    "failedAfterTargetedFixes": 0,
     "supplementaryPublicViewportChecksPassed": 5
   },
   "checks": [
     "typecheck",
     "lint",
     "production build",
-    "offline PWA repository subpath",
-    "CPU offline benchmark"
+    "production PWA offline reload",
+    "PostgreSQL RLS/CAS integration"
   ],
   "benchmarks": [
     {
       "days": 1,
-      "elapsedMs": 111.19867099999999,
+      "elapsedMs": 102.41852100000006,
       "steps": 1440,
       "processedSeconds": 86400,
       "objects": 74,
@@ -32,7 +33,7 @@
     },
     {
       "days": 7,
-      "elapsedMs": 539.032628,
+      "elapsedMs": 611.623601,
       "steps": 10080,
       "processedSeconds": 604800,
       "objects": 74,
@@ -42,7 +43,7 @@
     },
     {
       "days": 30,
-      "elapsedMs": 2133.4534969999995,
+      "elapsedMs": 2465.944119,
       "steps": 43200,
       "processedSeconds": 2592000,
       "objects": 74,
@@ -52,7 +53,7 @@
     },
     {
       "days": 90,
-      "elapsedMs": 6625.700215,
+      "elapsedMs": 5763.963999,
       "steps": 129600,
       "processedSeconds": 7776000,
       "objects": 74,
@@ -65,25 +66,26 @@
     "beforeTriangles": 78108,
     "afterTriangles": 89442,
     "beforeLengthCm": 1.26,
-    "afterLengthCm": 2.9400592141876785
+    "afterLengthCm": 2.939507807987082
   },
   "publication": {
     "url": "https://r0bjn10-maker.github.io/aquascape-3d/",
     "repository": "r0bjn10-maker/aquascape-3d",
     "buildBranch": "gh-pages",
     "sourceBranch": "main",
-    "buildCommit": "7c439eea47612c3ab9e35ce2e85b988bf40e9d29",
+    "buildCommit": "210131150500414d6f6dbb99c87bead75c32f2a0",
     "status": "success",
-    "deploymentRun": 39877643642,
-    "deploymentUrl": "https://github.com/r0bjn10-maker/aquascape-3d/actions/runs/39877643642",
-    "publicSmoke": "qa/phase1/public/results.json",
+    "deploymentRun": 39899471162,
+    "deploymentUrl": "https://github.com/r0bjn10-maker/aquascape-3d/actions/runs/39899471162",
+    "publicSmoke": "qa/cloud/public/results.json",
     "publicViewportChecksPassed": 5
   },
-  "limitations": [
-    "All artwork is procedural fallback; no final professional GLB art.",
-    "Software WebGL only; desktop 60FPS and mobile 30FPS targets unverified on physical hardware.",
-    "Conservative hardscape envelope collision, no exact triangle collision.",
-    "No physical iOS/Android/Windows or Safari testing."
-  ],
-  "sourceHashMethod": "SHA256 compact UTF-8 JSON of sorted src-relative path to SHA256 digests"
+  "cloudConfigured": false,
+  "cloudTesting": {
+    "cloudBackend": "Not configured: no real Supabase project/public settings/SMTP supplied.",
+    "browserCloud": "Actual Supabase SDK/Auth/IndexedDB, intercepted HTTP mock server.",
+    "sql": "Actual migration executed in embedded PostgreSQL/PGlite with auth.uid fixture.",
+    "hardware": "Chromium profiles and software WebGL; no physical Windows/iPhone/iPad or SMTP delivery verification."
+  },
+  "setupGuide": "CLOUD_SAVE_GUIDE.md"
 }

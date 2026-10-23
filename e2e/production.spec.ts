@@ -7,11 +7,11 @@ test('production repository subpath, PWA offline reload and measured rendering',
   page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)bad.push(r.url());});
   await page.goto('./?quality=low');await expect(page.getByTestId('performance')).not.toHaveText(/^0 fps/,{timeout:60000});
   await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
-  await page.getByRole('button',{name:'Khám phá hồ mẫu',exact:false}).click();await page.keyboard.press('Control+s');
+  await page.getByRole('button',{name:'Khám phá hồ mẫu',exact:false}).click();await page.keyboard.press('Control+s');await expect(page.locator('.save-status')).toHaveText('Đã lưu');
   const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('aquascape-world-v1')!));
   await page.reload();await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
   await context.setOffline(true);await page.reload({waitUntil:'domcontentloaded'});
-  await expect(page.getByRole('button',{name:'Tiếp tục hồ đã lưu'})).toBeVisible();await page.getByRole('button',{name:'Tiếp tục hồ đã lưu'}).click();await page.keyboard.press('Control+s');
+  await expect(page.getByRole('button',{name:'Tiếp tục hồ đã lưu'})).toBeVisible();await page.getByRole('button',{name:'Tiếp tục hồ đã lưu'}).click();await page.keyboard.press('Control+s');await expect(page.locator('.save-status')).toHaveText('Đã lưu');
   const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('aquascape-world-v1')!));expect(after.terrain).toEqual(before.terrain);expect(after.objects.map((o:{id:string})=>o.id)).toEqual(before.objects.map((o:{id:string})=>o.id));
   await expect(page.getByTestId('performance')).not.toHaveText(/^0 fps/,{timeout:60000});
   const samples=[];for(let i=0;i<4;i++){await page.waitForTimeout(2100);samples.push(await page.getByTestId('performance').innerText());}

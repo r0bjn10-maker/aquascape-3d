@@ -4,28 +4,28 @@
     {
       "cycle": 0,
       "scene": "dense",
-      "metrics": "7 fps · 147.3 ms · 83 calls · 111,864 tris · 3 tex",
+      "metrics": "4 fps · 252.4 ms · 83 calls · 111,864 tris · 3 tex",
       "geometries": 73,
       "textures": 3
     },
     {
       "cycle": 0,
       "scene": "cleared",
-      "metrics": "5 fps · 201.8 ms · 27 calls · 5,772 tris · 3 tex",
+      "metrics": "8 fps · 128.3 ms · 27 calls · 5,772 tris · 3 tex",
       "geometries": 29,
       "textures": 3
     },
     {
       "cycle": 1,
       "scene": "dense",
-      "metrics": "5 fps · 183.3 ms · 83 calls · 111,864 tris · 3 tex",
+      "metrics": "3 fps · 359.2 ms · 83 calls · 111,864 tris · 3 tex",
       "geometries": 73,
       "textures": 3
     },
     {
       "cycle": 1,
       "scene": "cleared",
-      "metrics": "6 fps · 160.4 ms · 27 calls · 5,772 tris · 3 tex",
+      "metrics": "8 fps · 132.2 ms · 27 calls · 5,772 tris · 3 tex",
       "geometries": 29,
       "textures": 3
     }

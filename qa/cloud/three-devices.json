@@ -1,0 +1,11 @@
+{
+  "transport": "Mock Supabase HTTP + actual SDK/Auth/IndexedDB; sequential Chromium profiles, not physical devices",
+  "version": 4,
+  "profiles": [
+    "Windows",
+    "iPhone",
+    "iPad"
+  ],
+  "savedName": "Chăm hồ từ iPhone",
+  "errors": []
+}

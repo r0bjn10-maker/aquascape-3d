@@ -45,3 +45,13 @@ Catalog/form profiles tách artwork khỏi simulation, schema 2 thêm `appearanc
 Geometry/material/textures/PMREM có cleanup khi đổi loài/quality/unmount. Monitor đọc renderer.info (calls, triangles, textures, geometries/programs); số đo không phải VRAM bytes. Chế độ quality điều khiển DPR, leaf subdivisions/limit, fish detail, glass, shadows, reflection/caustics. Placement ghost cập nhật cursor ref thay vì state mỗi frame. Free Orbit thoát camera preset nội suy và giữ điều khiển chuột/cảm ứng.
 
 Source public nằm ở main riêng của repository Aquascape; Pages lấy dist từ gh-pages. Không chứa source/lịch sử game khác trong repository phát triển ban đầu.
+
+## Cloud Save & Sync — 2.3
+
+`persistence/database.ts` quản lý IndexedDB state/checkpoint + 10 backup, metadata link, userDirty/userSequence, durable pending request và seq CAS. `journal.ts` giữ Web Lock browser và nhập legacy localStorage. SaveJournal đồng bộ cũ chỉ giữ cho tương thích/unit migration; production dùng IndexedDB async. Mirror JSON localStorage là best effort, không ghi đè IndexedDB trên boot. `state/persist.ts` serialize local commits, giữ edit phát sinh khi IDB write đang chạy; `hasSavedWorld` tách việc có save khỏi trạng thái dirty/saved của live world để nút tiếp tục không biến mất.
+
+`cloud/sync.ts` là coordinator thuần có ports (flush/replace/suspend/auth-generation/status), serialize request và user resolutions; transport Supabase tách riêng. Pending được journal trước network, ghi có điều kiện theo cloud version và exact retry ID. ACK không xóa edit mới; auth khác không được ACK/push hồ cũ. Time-only CAS losers có thể rebase toàn bộ từ canonical, user-edit divergence yêu cầu lựa chọn. Không field-level merge hoặc cộng các catch-up snapshots.
+
+`cloud/supabase.ts` whitelist schema World khi gửi, không gửi blob/model path/assets hay token. `cloud/controller.ts` nối SDK/Auth với Zustand/journal, epoch hủy result lỗi thời; `CloudPanel` cho magic link/OTP, status, conflict và backup. RPC SQL dùng row lock/expected version, server UTC monotonic check, receipt SHA256 và owner auth.uid. RLS bảo vệ SELECT, DML trực tiếp bị revoke; security-definer RPC có search_path rỗng và kiểm tra actor explicit. Một tài khoản/một hồ; cloud backups 20, request receipts 100.
+
+Runtime pull khi boot/foreground trước catch-up, reset monotonic sample sau replace, biology và save chỉ world chính, giữ Balanced. Autosave 700ms/10s, cloud edit debounce 1.8s/poll30s/focus/reconnect. API responses/session không precache bằng Workbox; chỉ static app assets offline. Xem CLOUD_SAVE_GUIDE.md để cấu hình project và các giới hạn offline/native browser.
