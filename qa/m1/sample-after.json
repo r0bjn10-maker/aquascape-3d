@@ -1,0 +1,16 @@
+{
+  "scene": "unchanged createWorld sample",
+  "quality": "low",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "samples": [
+    "3.8 fps · 261.9 ms · 49 calls · 116,676 tris · 28 tex",
+    "3.8 fps · 261.9 ms · 49 calls · 116,676 tris · 28 tex",
+    "4.5 fps · 222.0 ms · 49 calls · 116,676 tris · 28 tex",
+    "4.9 fps · 204.9 ms · 49 calls · 116,676 tris · 28 tex"
+  ],
+  "errors": [],
+  "hardware": "Chromium SwiftShader; software only, not desktop/mobile GPU FPS"
+}

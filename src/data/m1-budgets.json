@@ -1,0 +1,38 @@
+{
+  "anubias": {
+    "high": 280,
+    "low": 62
+  },
+  "betta": {
+    "high": 4108,
+    "low": 1300
+  },
+  "dragon": {
+    "high": 7004,
+    "low": 1080
+  },
+  "monte": {
+    "high": 280,
+    "low": 62
+  },
+  "neon": {
+    "high": 4068,
+    "low": 1260
+  },
+  "rotala": {
+    "high": 280,
+    "low": 62
+  },
+  "seiryu": {
+    "high": 7004,
+    "low": 1080
+  },
+  "shrimp": {
+    "high": 3826,
+    "low": 1602
+  },
+  "spider": {
+    "high": 8680,
+    "low": 2492
+  }
+}

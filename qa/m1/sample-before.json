@@ -1,0 +1,10 @@
+{
+  "scene": "unchanged createWorld sample",
+  "quality": "low",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "performance": "6 fps · 170.0 ms · 47 calls · 78,070 tris · 3 tex",
+  "hardware": "Chromium SwiftShader; software only, not desktop/mobile GPU FPS"
+}

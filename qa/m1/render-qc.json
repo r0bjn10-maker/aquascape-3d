@@ -1,0 +1,170 @@
+{
+  "samples": [
+    {
+      "view": "front",
+      "fps": 10.4,
+      "frameMs": 96.56363636390729,
+      "calls": 43,
+      "triangles": 37212,
+      "textures": 36,
+      "geometries": 44,
+      "programs": 13
+    },
+    {
+      "view": "perspective",
+      "fps": 7.4,
+      "frameMs": 135.20000000049671,
+      "calls": 43,
+      "triangles": 37212,
+      "textures": 36,
+      "geometries": 44,
+      "programs": 13
+    },
+    {
+      "view": "top",
+      "fps": 5.2,
+      "frameMs": 191.71666666741172,
+      "calls": 39,
+      "triangles": 37174,
+      "textures": 36,
+      "geometries": 44,
+      "programs": 13
+    }
+  ],
+  "quality": [
+    {
+      "quality": "low",
+      "fps": 4.6,
+      "frameMs": 218.75999999940396,
+      "calls": 40,
+      "triangles": 37176,
+      "textures": 37,
+      "geometries": 43,
+      "programs": 23
+    },
+    {
+      "quality": "high",
+      "fps": 1.7,
+      "frameMs": 577.5999999977648,
+      "calls": 40,
+      "triangles": 168102,
+      "textures": 38,
+      "geometries": 43,
+      "programs": 25
+    },
+    {
+      "quality": "low",
+      "fps": 4.9,
+      "frameMs": 205.8199999988079,
+      "calls": 40,
+      "triangles": 37176,
+      "textures": 37,
+      "geometries": 43,
+      "programs": 24
+    }
+  ],
+  "growth": [
+    {
+      "fps": 0.8,
+      "frameMs": 1249.300000000745,
+      "calls": 40,
+      "triangles": 99774,
+      "textures": 38,
+      "geometries": 46,
+      "programs": 27
+    },
+    {
+      "fps": 0.7,
+      "frameMs": 1418,
+      "calls": 40,
+      "triangles": 168102,
+      "textures": 38,
+      "geometries": 46,
+      "programs": 27
+    }
+  ],
+  "cleanup": [
+    {
+      "scene": "empty",
+      "cycle": 0,
+      "fps": 7,
+      "frameMs": 142.99999999999997,
+      "calls": 25,
+      "triangles": 5748,
+      "textures": 4,
+      "geometries": 29,
+      "programs": 19
+    },
+    {
+      "scene": "loaded",
+      "cycle": 0,
+      "fps": 5.2,
+      "frameMs": 191,
+      "calls": 41,
+      "triangles": 37188,
+      "textures": 37,
+      "geometries": 44,
+      "programs": 24
+    },
+    {
+      "scene": "empty",
+      "cycle": 1,
+      "fps": 6.9,
+      "frameMs": 145.17499999981374,
+      "calls": 25,
+      "triangles": 5748,
+      "textures": 4,
+      "geometries": 29,
+      "programs": 19
+    },
+    {
+      "scene": "loaded",
+      "cycle": 1,
+      "fps": 5.3,
+      "frameMs": 188.06666666641829,
+      "calls": 41,
+      "triangles": 37188,
+      "textures": 37,
+      "geometries": 44,
+      "programs": 24
+    }
+  ],
+  "diagnostics": {
+    "loaded": [
+      "models/m1/monte-0-low.glb",
+      "models/m1/monte-1-low.glb",
+      "models/m1/monte-2-low.glb",
+      "models/m1/anubias-0-low.glb",
+      "models/m1/anubias-1-low.glb",
+      "models/m1/anubias-2-low.glb",
+      "models/m1/rotala-0-low.glb",
+      "models/m1/rotala-1-low.glb",
+      "models/m1/rotala-2-low.glb",
+      "models/m1/neon-0-low.glb",
+      "models/m1/shrimp-0-low.glb",
+      "models/m1/seiryu-1-low.glb",
+      "models/m1/dragon-2-low.glb",
+      "models/m1/spider-0-low.glb",
+      "models/m1/betta-0-low.glb",
+      "models/m1/seiryu-1-high.glb",
+      "models/m1/dragon-2-high.glb",
+      "models/m1/spider-0-high.glb",
+      "models/m1/monte-0-high.glb",
+      "models/m1/monte-1-high.glb",
+      "models/m1/monte-2-high.glb",
+      "models/m1/anubias-0-high.glb",
+      "models/m1/anubias-1-high.glb",
+      "models/m1/anubias-2-high.glb",
+      "models/m1/rotala-0-high.glb",
+      "models/m1/rotala-1-high.glb",
+      "models/m1/rotala-2-high.glb",
+      "models/m1/neon-0-high.glb",
+      "models/m1/betta-0-high.glb",
+      "models/m1/shrimp-0-high.glb"
+    ],
+    "failed": []
+  },
+  "morphAnimationChanged": true,
+  "errors": [],
+  "hardware": "Chromium software WebGL/SwiftShader; not physical-device FPS"
+}

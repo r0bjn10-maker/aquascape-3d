@@ -5,7 +5,7 @@
   "samples": [
     {
       "days": 1,
-      "elapsedMs": 102.41852100000006,
+      "elapsedMs": 83.44255899999999,
       "steps": 1440,
       "processedSeconds": 86400,
       "objects": 74,
@@ -15,7 +15,7 @@
     },
     {
       "days": 7,
-      "elapsedMs": 611.623601,
+      "elapsedMs": 308.06168799999995,
       "steps": 10080,
       "processedSeconds": 604800,
       "objects": 74,
@@ -25,7 +25,7 @@
     },
     {
       "days": 30,
-      "elapsedMs": 2465.944119,
+      "elapsedMs": 1173.932941,
       "steps": 43200,
       "processedSeconds": 2592000,
       "objects": 74,
@@ -35,7 +35,7 @@
     },
     {
       "days": 90,
-      "elapsedMs": 5763.963999,
+      "elapsedMs": 3445.342367,
       "steps": 129600,
       "processedSeconds": 7776000,
       "objects": 74,

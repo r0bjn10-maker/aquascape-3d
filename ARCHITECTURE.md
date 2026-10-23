@@ -55,3 +55,10 @@ Source public nằm ở main riêng của repository Aquascape; Pages lấy dist
 `cloud/supabase.ts` whitelist schema World khi gửi, không gửi blob/model path/assets hay token. `cloud/controller.ts` nối SDK/Auth với Zustand/journal, epoch hủy result lỗi thời; `CloudPanel` cho magic link/OTP, status, conflict và backup. RPC SQL dùng row lock/expected version, server UTC monotonic check, receipt SHA256 và owner auth.uid. RLS bảo vệ SELECT, DML trực tiếp bị revoke; security-definer RPC có search_path rỗng và kiểm tra actor explicit. Một tài khoản/một hồ; cloud backups 20, request receipts 100.
 
 Runtime pull khi boot/foreground trước catch-up, reset monotonic sample sau replace, biology và save chỉ world chính, giữ Balanced. Autosave 700ms/10s, cloud edit debounce 1.8s/poll30s/focus/reconnect. API responses/session không precache bằng Workbox; chỉ static app assets offline. Xem CLOUD_SAVE_GUIDE.md để cấu hình project và các giới hạn offline/native browser.
+
+
+## M1 asset renderer (2.4)
+
+`modelAssets.ts` maps the nine stable IDs to GLB kind, variants, clip and quality LOD. `m1-budgets.json` is generated from the exported triangles. `AssetModel` renders ground-centered GLBs in catalog units and keeps selection material local. `Plants.Species` instances actual leaf-module geometry, while existing biology and `authoredLeafPose` create individual leaves at new nodes/runners. `ModelFish` uses the GLB's morph targets and AnimationMixer clip to fill InstancedMesh morph textures per animal; heading uses quaternion interpolation. Procedural modules remain runtime fallback.
+
+`modelResources.ts` checks required PBR maps, shares named texture resources across variants/LODs and reference-counts GPU disposal. CPU loader cache is bounded by the fixed paths; instanced buffers and mixer caches are explicitly released. These files are static public assets; persistence contains no GLB/texture payload. `tools/m1` is the reproducible Blender art toolchain, not a runtime mesh generator. See M1_ASSET_REPORT.md and ASSET_LICENSES.md.

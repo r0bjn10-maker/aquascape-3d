@@ -1,12 +1,23 @@
-# AQUASCAPE 3D — Living Ecosystem 2.3 — Cloud Save & Sync
+# AQUASCAPE 3D — Living Ecosystem 2.4 — M1 Asset Upgrade
 
 **Chơi trực tiếp:** https://r0bjn10-maker.github.io/aquascape-3d/ — chọn “Khám phá hồ mẫu” để bắt đầu. Bản web đã được xuất bản và kiểm tra thao tác cảm ứng, lưu và tải lại hồ trên viewport điện thoại 390×844.
 
-Bản nâng cấp đồ họa của game hồ thủy sinh hiện có: 5 preset ánh sáng, kính trước bật/tắt riêng, mặt nước gợn, nền có color/normal/roughness maps, 4 chế độ camera, thư viện tìm kiếm và ghost theo kích thước. Có 10 loài cá + tép Cherry, 15 cây, 6 đá × 3 biến thể và 5 lũa × 3 biến thể. **Toàn bộ artwork hiện là procedural fallback tự tạo; chưa có model GLB chuyên nghiệp/final art.**
+Bản nâng cấp đồ họa của game hồ thủy sinh hiện có: 5 preset ánh sáng, kính trước bật/tắt riêng, mặt nước gợn, nền có color/normal/roughness maps, 4 chế độ camera, thư viện tìm kiếm và ghost theo kích thước. Có 10 loài cá + tép Cherry, 15 cây, 6 đá × 3 biến thể và 5 lũa × 3 biến thể. **M1 tích hợp GLB/PBR cho Seiryu, Dragon, Spider Wood, Monte Carlo, Rotala, Anubias, Neon, Betta và Cherry Shrimp.** Còn 33 mục dùng procedural fallback. Asset là game art tự tạo, không phải scan/photorealistic; xem [báo cáo model và ảnh render](M1_ASSET_REPORT.md), [manifest](public/models/m1/manifest.json) và [giấy phép CC0](ASSET_LICENSES.md).
 
 Bản mở rộng trực tiếp của game hồ thủy sinh hiện có. Builder, terrain, camera, cá bơi, cây instanced, cửa hàng và save JSON vẫn được giữ. **Living 1:1 + Balanced là mặc định.** Có thể chơi cục bộ không tài khoản; Supabase là tùy chọn cho đồng bộ qua Internet. Không có quảng cáo hay ứng dụng chạy ngầm.
 
-## Cloud Save & Sync
+## M1 — mô hình và kiểm tra
+
+Không thêm gameplay/cloud trong phase này. Renderer giữ fallback khi tải GLB/texture thất bại. Neon/Betta/Shrimp dùng clip morph GLB theo từng cá thể; hardscape có 3 biến thể và 2 LOD; cây dùng 3 leaf modules/loài. Có thể zoom gần hơn để kiểm tra model.
+
+```sh
+npm run assets:models # cần Blender 4.3+, Python numpy/Pillow; chỉ khi sửa artwork
+npm run assets:validate
+npm run assets        # preview WebGL từ GLB thật
+npm run test:e2e -- e2e/models.spec.ts
+```
+
+## Cloud Save & Sync (giữ nguyên từ 2.3)
 
 Bản 2.3 chuyển bộ lưu offline sang IndexedDB, nhập save cũ và thêm Supabase Auth + CAS sync. Mở Menu → Cloud Save để cấu hình/đăng nhập. **Cần chủ project tạo Supabase và chạy SQL trước khi có đồng bộ thật.** [Hướng dẫn cấu hình, bảo mật và xung đột](CLOUD_SAVE_GUIDE.md). Chơi offline vẫn hoạt động nếu chưa cấu hình.
 
@@ -36,7 +47,7 @@ Với bản web ZIP đã build: giải nén, mở terminal tại thư mục ch�
 
 Chọn hồ mẫu, hồ mới với 1.500 xu hoặc Creative. Bố cục → chọn cọ/chạm nền hoặc đặt đá/lũa. Chọn cây/sinh vật/thiết bị từ kho. Dùng con trỏ để chọn vật thể, kéo nút xanh hoặc chỉnh X/Z/cao/xoay/kích thước. Nhân bản, xóa, undo/redo 40 bước vẫn hoạt động. Ctrl/Cmd+S lưu; Ctrl/Cmd+Z undo; Shift+Ctrl/Cmd+Z redo; Esc hủy chọn; Delete xóa.
 
-Cây có tuổi, sức khỏe, sinh khối và morphology theo loài. Monte Carlo/rêu mở rộng mật độ và vùng phủ; Rotala có thân/nhánh và phân nhánh sau tỉa; Vallisneria có cụm con/runner; Anubias/Java Fern phát triển chậm và tăng thân rễ/lá. Số lá, chiều cao, spread và màu sắc đổi thực trong renderer. Instance mới chuyển tiếp mềm. Vẫn dùng procedural art, chưa phải final realistic assets.
+Cây có tuổi, sức khỏe, sinh khối và morphology theo loài. Monte Carlo/rêu mở rộng mật độ và vùng phủ; Rotala có thân/nhánh và phân nhánh sau tỉa; Vallisneria có cụm con/runner; Anubias/Java Fern phát triển chậm và tăng thân rễ/lá. Số lá, chiều cao, spread và màu sắc đổi thực trong renderer. Instance mới chuyển tiếp mềm. Ba cây M1 dùng GLB leaf modules có petiole/UV/PBR, instancing và tăng số lá theo morphology; cây khác giữ fallback.
 
 Cá/tép mới là cá thể non, lớn dần theo thức ăn/nước/sức khỏe; không vượt kích thước trưởng thành. Toàn thân/đuôi/vây/mắt cùng đổi tỷ lệ. Tuổi, health, hunger, energy, stress, comfort và behaviour được lưu. Tép có tốc độ trưởng thành khác cá và tìm thức ăn gần nền/hardscape. Không có sinh sản.
 
@@ -83,4 +94,4 @@ PWA cache tài nguyên build sau lần tải đủ. Để nhận bản nâng c�
 
 [Tài liệu thiết kế](GAME_DESIGN.md) · [Kiến trúc](ARCHITECTURE.md) · [Asset](ASSET_GUIDE.md) · [QA](QA_REPORT.md) · [Cloud setup](CLOUD_SAVE_GUIDE.md) · [Changelog](CHANGELOG.md)
 
-Bản 2.3: 117 unit/integration tests, 21 luồng browser dev và 1 production/PWA workflow được kiểm tra; kết quả cuối/hash/xuất bản trong [QA_REPORT.md](QA_REPORT.md) và `qa/cloud/release.json`. Auth/HTTP cloud dùng mock với SDK thật; RLS/SQL chạy PostgreSQL nhúng. Cần cấu hình Supabase thật theo CLOUD_SAVE_GUIDE.md để bật đồng bộ qua Internet. Kết quả đồ họa 2.2 trước đây lưu trong QA_REPORT_V22_HISTORY.md.
+Bản 2.4: 129 unit/integration tests, 24 luồng browser dev và 1 production/PWA workflow đã đạt qua suite và chạy lại có mục tiêu; 42 GLB có 0 lỗi/0 cảnh báo Khronos. Kết quả/hash trong [QA_REPORT.md](QA_REPORT.md) và `qa/m1/release.json`. Báo cáo cloud 2.3 lưu tại QA_REPORT_V23_HISTORY.md và `qa/cloud/release.json`. Auth/HTTP cloud dùng mock với SDK thật; RLS/SQL chạy PostgreSQL nhúng. Cần cấu hình Supabase thật theo CLOUD_SAVE_GUIDE.md để bật đồng bộ qua Internet. Kết quả đồ họa 2.2 trước đây lưu trong QA_REPORT_V22_HISTORY.md.

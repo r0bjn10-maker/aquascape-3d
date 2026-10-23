@@ -11,7 +11,8 @@ export interface AssetDef {
   description: string; size: number; height: number; attachment?: boolean;
   light?: number; co2?: number; growthRate?: number; zone?: string;
   model: string | null; license: string; bounds: [number, number, number];
-  preview:string;status:'final'|'procedural-fallback'|'placeholder';variants:number;
+  preview:string;status:'final'|'authored-glb'|'procedural-fallback'|'placeholder';variants:number;
+  modelSpec?:{kind:'hardscape'|'leaf-module'|'morph-animal';variants:number;lods:['low','high'];animation?:string;source:string};
   placement:{surface:'substrate'|'hardscape-or-substrate'|'water'|'equipment';zone:string};
   material:{kind:string;roughness:number;metalness:number};
   performance:{triangles:number;drawCalls:number;instanced:boolean};

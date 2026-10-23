@@ -17,7 +17,7 @@ function Piece({item}:{item:PlacedObject}){
   useEffect(()=>{material.emissive.set(selected?'#315c50':'#000000');material.emissiveIntensity=.35;},[selected,material]);
   useEffect(()=>()=>{geo.dispose();material.dispose();},[geo,material]);
   const fallback=<mesh geometry={geo} material={material} scale={[1,asset.height,1]} castShadow receiveShadow/>;
-  return <group position={[item.x,heightAt(terrain,item.x,item.z)+item.elevation-.04,item.z]} rotation={[0,item.rotation,asset.category==='rocks'?-.08:0]} scale={item.scale} onPointerMove={e=>{if(useGame.getState().attachment)updatePlacementCursor(e.point);}} onClick={e=>selectObject(item.id,e)}><AssetModel asset={asset} fallback={fallback}/></group>;
+  return <group position={[item.x,heightAt(terrain,item.x,item.z)+item.elevation-.04,item.z]} rotation={[0,item.rotation,0]} scale={item.scale} onPointerMove={e=>{if(useGame.getState().attachment)updatePlacementCursor(e.point);}} onClick={e=>selectObject(item.id,e)}><AssetModel asset={asset} variant={item.variant??0} detail={detail} selected={selected} fallback={fallback}/></group>;
 }
 export function Hardscape(){
   const objects=useGame(s=>visibleWorld(s).objects);

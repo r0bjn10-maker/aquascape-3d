@@ -11,7 +11,7 @@ test.beforeEach(async()=>{await mkdir('qa/phase1',{recursive:true});});
 test('all registry previews are local decodable WebP files with explicit fallback status',async({request})=>{
   const response=await request.get('/asset-registry.json');expect(response.ok()).toBe(true);
   const registry=await response.json();expect(registry.assets).toHaveLength(42);
-  for(const asset of registry.assets){expect(asset.status).toBe('procedural-fallback');for(let variant=0;variant<asset.variants;variant++){
+  for(const asset of registry.assets){expect(asset.status).toBe(asset.modelSpec?'authored-glb':'procedural-fallback');for(let variant=0;variant<asset.variants;variant++){
     const preview=await request.get('/'+asset.preview.replace('-0.webp',`-${variant}.webp`));expect(preview.status()).toBe(200);expect((await preview.body()).subarray(0,4).toString()).toBe('RIFF');
   }}
 });
@@ -59,7 +59,7 @@ test('dense plant/fish scene renders and repeated import/reset releases GPU reso
     for(const [i,a] of catalog.filter(a=>a.category==='rocks'||a.id==='arch').entries())world.objects.push(constrainObject(object(a.id,-1.8+i*.6,-.65,.5),world.terrain));
     world.animals=Array.from({length:66},(_,i)=>{const f=animal(Object.keys(FISH_FORMS)[i%11],i,world.terrain);f.life.lengthCm=f.life.adultLengthCm*.75;return f;});
     await writeFile('qa/phase1/stress-world.json',JSON.stringify(world));await page.getByRole('button',{name:'Menu và cài đặt'}).click();await page.locator('input[type=file]').setInputFiles({name:'graphics-stress.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(world))});
-    await expect.poll(async()=>(await snapshot()).geometries,{timeout:60000}).toBeGreaterThan(baseline+20);await expect(perf).toContainText('111,864 tris',{timeout:60000});await page.waitForTimeout(2100);samples.push({cycle,scene:'dense',...await snapshot()});
+    await expect.poll(async()=>(await snapshot()).geometries,{timeout:60000}).toBeGreaterThan(baseline+20);await expect.poll(async()=>Number((await perf.textContent())?.match(/([\d,]+) tris/)?.[1].replaceAll(',','')),{timeout:60000}).toBeGreaterThan(100000);await page.waitForTimeout(2100);samples.push({cycle,scene:'dense',...await snapshot()});
     if(cycle===0)await page.screenshot({path:'qa/phase1/dense-scene.png',timeout:60000});
     await page.getByRole('button',{name:'Menu và cài đặt'}).click();await page.getByRole('button',{name:'Tạo hồ khác'}).click();await page.getByRole('button',{name:'Mở màn hình bắt đầu'}).click();await page.getByRole('button',{name:'Tạo hồ mới',exact:false}).click();await page.waitForTimeout(2600);
     await writeFile('qa/phase1/resource-cleanup.json',JSON.stringify({baseline,samples},null,2));await expect.poll(async()=>Number(await perf.getAttribute('data-geometries')),{timeout:15000}).toBeLessThanOrEqual(baseline+5);await expect(perf).toContainText('5,772 tris',{timeout:15000});samples.push({cycle,scene:'cleared',...await snapshot()});

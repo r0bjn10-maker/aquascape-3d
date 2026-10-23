@@ -22,7 +22,7 @@ function Monitor(){
   useFrame(({gl},dt)=>{
     sample.time+=dt;sample.frames++;
     if(sample.time>1){
-      metrics.fps=Math.round(sample.frames/sample.time);metrics.frameMs=sample.time*1000/sample.frames;
+      metrics.fps=+(sample.frames/sample.time).toFixed(1);metrics.frameMs=sample.time*1000/sample.frames;
       metrics.calls=gl.info.render.calls;metrics.triangles=gl.info.render.triangles;metrics.textures=gl.info.memory.textures;metrics.geometries=gl.info.memory.geometries;metrics.programs=gl.info.programs?.length??0;
       sample.slow=metrics.fps<25?sample.slow+1:Math.max(0,sample.slow-1);
       if(useGame.getState().quality==='auto'&&sample.slow>=5&&!useGame.getState().adaptiveLow){useGame.getState().set({adaptiveLow:true});sample.slow=0;}

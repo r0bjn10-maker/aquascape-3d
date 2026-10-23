@@ -1,7 +1,7 @@
 {
   "name": "aquascape-3d",
   "private": true,
-  "version": "2.3.0",
+  "version": "2.4.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -13,7 +13,9 @@
     "test:e2e": "playwright test",
     "benchmark": "vitest run src/tests/offline-benchmark.test.ts --maxWorkers=1",
     "assets": "node scripts/generate-previews.mjs",
-    "prebuild": "npm run assets"
+    "prebuild": "npm run assets",
+    "assets:models": "blender --background --python tools/m1/build_assets.py && python3 tools/m1/pack_assets.py",
+    "assets:validate": "node scripts/validate-models.mjs"
   },
   "dependencies": {
     "@react-three/drei": "10.7.7",
@@ -36,6 +38,7 @@
     "@vitejs/plugin-react": "5.0.4",
     "eslint": "9.39.1",
     "fake-indexeddb": "6.2.6",
+    "gltf-validator": "^2.0.0-dev.3.10",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.2",
     "vite": "7.3.7",

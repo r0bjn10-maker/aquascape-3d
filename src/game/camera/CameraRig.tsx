@@ -12,5 +12,5 @@ export function CameraRig(){
   const dragging=useGame(s=>s.dragging),tool=useGame(s=>s.tool),zen=useGame(s=>s.zen&&s.zenOrbit);
   useEffect(()=>{if(view==='orbit'){moving.current=false;return;}target.current.set(...positions[view] as [number,number,number]);target.current.sub(new THREE.Vector3(0,1.6,0)).multiplyScalar(Math.max(1,1.3/aspect)).add(new THREE.Vector3(0,1.6,0));moving.current=true;if(controls.current)controls.current.target.set(0,1.6,0);},[view,revision,aspect]);
   useFrame((_,dt)=>{if(moving.current){camera.position.lerp(target.current,1-Math.exp(-dt*5));if(camera.position.distanceTo(target.current)<.02)moving.current=false;controls.current?.update();}});
-  return <OrbitControls ref={controls} makeDefault target={[0,1.6,0]} minDistance={5} maxDistance={36} maxPolarAngle={Math.PI*.485} enabled={!dragging&&tool==='select'} enableDamping dampingFactor={.08} rotateSpeed={.55} panSpeed={.4} onStart={()=>{moving.current=false;}} autoRotate={zen} autoRotateSpeed={.12}/>;
+  return <OrbitControls ref={controls} makeDefault target={[0,1.6,0]} minDistance={.6} maxDistance={36} maxPolarAngle={Math.PI*.485} enabled={!dragging&&tool==='select'} enableDamping dampingFactor={.08} rotateSpeed={.55} panSpeed={.4} onStart={()=>{moving.current=false;}} autoRotate={zen} autoRotateSpeed={.12}/>;
 }

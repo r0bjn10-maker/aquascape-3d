@@ -2,6 +2,8 @@ import { useRef,useMemo,useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useGame,visibleWorld } from '../../state/store';
+import { assets } from '../../data/catalog';
+import { ModelFish } from './ModelFish';
 import { FISH_FORMS } from '../../data/forms';
 import { createFishGeometry } from '../assets/fishGeometry';
 import { moveAnimals } from './movement';
@@ -9,7 +11,7 @@ import type { Animal } from '../types';
 import { recordPose,withVisualPose } from './poses';
 import { qualitySettings } from '../scene/settings';
 const dummy=new THREE.Object3D(),color=new THREE.Color();
-interface VisualFish {fish:Animal[];time:number;sizes:Map<string,number>}
+export interface VisualFish {fish:Animal[];time:number;sizes:Map<string,number>}
 function Batch({species,visual,detail}:{species:string;visual:React.RefObject<VisualFish>;detail:number}){
   const body=useRef<THREE.InstancedMesh>(null),tail=useRef<THREE.InstancedMesh>(null);
   const geometry=useMemo(()=>createFishGeometry(species,detail),[species,detail]);
@@ -43,5 +45,5 @@ export function Fish(){
     if(!s.preview)for(const f of data.fish)recordPose(f);
   },-1);
   const detail=qualitySettings(quality,adaptiveLow).detail;
-  return <>{Object.keys(FISH_FORMS).filter(id=>animals.some(f=>f.species===id&&f.life.alive)).map(id=><Batch key={id} species={id} visual={visual} detail={detail}/>)}</>;
+  return <>{Object.keys(FISH_FORMS).filter(id=>animals.some(f=>f.species===id&&f.life.alive)).map(id=>assets[id].modelSpec?.kind==='morph-animal'?<ModelFish key={id} species={id} visual={visual} detail={detail} fallback={<Batch species={id} visual={visual} detail={detail}/>}/>:<Batch key={id} species={id} visual={visual} detail={detail}/>)}</>;
 }

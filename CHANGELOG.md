@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.0 — M1 Realistic Asset Quality First — 2026-10-23
+
+Thay renderer của 9 nhóm ưu tiên bằng 42 file GLB theo biến thể/LOD, PBR base/normal/roughness, mesh/texture tự tạo CC0 và manifest SHA-256. Hardscape giữ transform/selection/ID; ba cây dùng leaf modules instanced theo growth/branch/runner; ba sinh vật dùng clip morph GLB instanced với phase riêng và hướng bơi chuyển tiếp. Giữ fallback nếu model/PBR không tải được; shared textures, GPU/mixer cleanup, camera zoom gần hơn, preview GLB thật và QC ảnh cận cảnh/5 ánh sáng. Không đổi gameplay, cloud, schema save hay Balanced. Giới hạn chất lượng art và thiết bị chưa đo được ghi trong M1_ASSET_REPORT.md.
+
+
 ## 2.3.0 — Cross-Device Cloud Save & Sync
 
 Thêm IndexedDB primary/checkpoint/pending journal và migration schema1/2 từ localStorage. Tích hợp Supabase Auth magic link/PKCE + email code, session persistence/refresh, RLS/CAS RPC và request idempotency. Auto-sync theo edit, reconnect/focus/foreground và polling; conflict giữ nhánh local, backup trước tải cloud, JSON export/import, phục hồi local và tải cloud backups. Tất cả asset vẫn tham chiếu ID, không upload model. Giữ engine real-time/Balanced và framework. Project Supabase/SMTP/redirect URLs cần chủ game cấu hình; xem CLOUD_SAVE_GUIDE.md.

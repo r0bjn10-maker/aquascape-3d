@@ -1,91 +1,64 @@
 {
-  "version": "2.3.0",
-  "schema": 2,
-  "sourceSha256": "4a29e2b6d5098f19a565baab6c51077bc3256d11fa75ab39cf7e2523192ac995",
-  "sourceHashMethod": "SHA256 of compact JSON mapping sorted source/config/test/SQL paths to their SHA256 digests; no credentials",
-  "unitTests": {
-    "passed": 117,
-    "failed": 0
-  },
-  "browserTests": {
-    "developmentPassed": 21,
-    "productionPassed": 1,
-    "failedAfterTargetedFixes": 0,
-    "supplementaryPublicViewportChecksPassed": 5
-  },
-  "checks": [
-    "typecheck",
-    "lint",
-    "production build",
-    "production PWA offline reload",
-    "PostgreSQL RLS/CAS integration"
-  ],
-  "benchmarks": [
-    {
-      "days": 1,
-      "elapsedMs": 102.41852100000006,
-      "steps": 1440,
-      "processedSeconds": 86400,
-      "objects": 74,
-      "animals": 18,
-      "feedings": 2,
-      "retainedEvents": 2
+  "version": "2.4.0",
+  "report": "qa/m1/release.json",
+  "tests": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unitIntegration": {
+      "passed": 129,
+      "failed": 0,
+      "method": "Full 129 passed; stronger geometry-signature assertion subsequently passed in 12-test targeted run."
     },
-    {
-      "days": 7,
-      "elapsedMs": 611.623601,
-      "steps": 10080,
-      "processedSeconds": 604800,
-      "objects": 74,
-      "animals": 18,
-      "feedings": 14,
-      "retainedEvents": 14
+    "developmentBrowser": {
+      "uniquePassed": 24,
+      "unresolvedFailures": 0,
+      "method": "Full suite 22 passed, two old-test failures corrected and both targeted reruns passed; production skipped in development and counted separately."
     },
-    {
-      "days": 30,
-      "elapsedMs": 2465.944119,
-      "steps": 43200,
-      "processedSeconds": 2592000,
-      "objects": 74,
-      "animals": 18,
-      "feedings": 60,
-      "retainedEvents": 40
+    "productionPwa": {
+      "passed": 1,
+      "failed": 0,
+      "htmlMatchedCurrentDist": true
     },
-    {
-      "days": 90,
-      "elapsedMs": 5763.963999,
-      "steps": 129600,
-      "processedSeconds": 7776000,
-      "objects": 74,
-      "animals": 18,
-      "feedings": 180,
-      "retainedEvents": 40
+    "gltfValidation": {
+      "files": 42,
+      "errors": 0,
+      "warnings": 0
+    },
+    "publicViewports": {
+      "passed": 5,
+      "failed": 0,
+      "sizes": [
+        [
+          390,
+          844
+        ],
+        [
+          360,
+          640
+        ],
+        [
+          844,
+          390
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          1280,
+          900
+        ]
+      ]
     }
-  ],
-  "visualGrowth": {
-    "beforeTriangles": 78108,
-    "afterTriangles": 89442,
-    "beforeLengthCm": 1.26,
-    "afterLengthCm": 2.939507807987082
   },
+  "notes": "No physical-device FPS or final-photorealism claim. Historical cloud release qa/cloud/release.json.",
   "publication": {
     "url": "https://r0bjn10-maker.github.io/aquascape-3d/",
-    "repository": "r0bjn10-maker/aquascape-3d",
-    "buildBranch": "gh-pages",
-    "sourceBranch": "main",
-    "buildCommit": "210131150500414d6f6dbb99c87bead75c32f2a0",
-    "status": "success",
-    "deploymentRun": 39899471162,
-    "deploymentUrl": "https://github.com/r0bjn10-maker/aquascape-3d/actions/runs/39899471162",
-    "publicSmoke": "qa/cloud/public/results.json",
-    "publicViewportChecksPassed": 5
-  },
-  "cloudConfigured": false,
-  "cloudTesting": {
-    "cloudBackend": "Not configured: no real Supabase project/public settings/SMTP supplied.",
-    "browserCloud": "Actual Supabase SDK/Auth/IndexedDB, intercepted HTTP mock server.",
-    "sql": "Actual migration executed in embedded PostgreSQL/PGlite with auth.uid fixture.",
-    "hardware": "Chromium profiles and software WebGL; no physical Windows/iPhone/iPad or SMTP delivery verification."
-  },
-  "setupGuide": "CLOUD_SAVE_GUIDE.md"
+    "buildCommit": "cf09c1a6a36435244c295c5ecdba3d134f5b2912",
+    "deploymentRun": 39937366115,
+    "deploymentStatus": "success",
+    "publicSmoke": "qa/m1/public/results.json",
+    "publicSmokePassed": 5
+  }
 }
