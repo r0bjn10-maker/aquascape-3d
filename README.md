@@ -1,5 +1,5 @@
-# Aquascape 3D 2.3
+# Aquascape 3D 2.4
 
 Play: https://r0bjn10-maker.github.io/aquascape-3d/
 
-Compiled Cloud Save release. Offline play works immediately; cloud requires a Supabase project and public configuration. See CLOUD_SAVE_GUIDE.md on main. Source, asset guide and QA report are on the main branch. All 42 assets are original procedural fallbacks, not final professional GLBs. Existing Living 1:1 and Balanced saves remain supported.
+Compiled M1 release. Nine asset families now use original CC0 GLB/PBR meshes with variants, LOD and morph animation. The other 33 entries retain procedural fallback. This game art is not photogrammetry. Source, manifest, license, rendered comparison and device-performance limits are documented on main in M1_ASSET_REPORT.md. Existing Living 1:1 and Balanced saves remain supported.

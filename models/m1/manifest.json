@@ -1,0 +1,1806 @@
+{
+  "version": "M1",
+  "license": "CC0-1.0",
+  "author": "Aquascape project; original assets authored with Blender/Python",
+  "source": "tools/m1/build_assets.py",
+  "assets": [
+    {
+      "id": "seiryu",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/seiryu-0-high.glb",
+      "bytes": 219120,
+      "triangles": 7004,
+      "boundsMin": [
+        -0.6109248399734497,
+        0.0,
+        -0.3899621069431305
+      ],
+      "boundsMax": [
+        0.6489832997322083,
+        1.350000023841858,
+        0.39503031969070435
+      ],
+      "animations": [],
+      "sha256": "7d1bbc430f99f09c3923a390c45538f224c84f7d10944fe93f1481807465476b",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.65,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "seiryu",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/seiryu-0-low.glb",
+      "bytes": 36824,
+      "triangles": 1080,
+      "boundsMin": [
+        -0.6162728071212769,
+        0.0,
+        -0.38658687472343445
+      ],
+      "boundsMax": [
+        0.6453089118003845,
+        1.350000023841858,
+        0.38301023840904236
+      ],
+      "animations": [],
+      "sha256": "05289d6c2e780cc6c3846dde5b32197e49889d3d45aba27d160408793a183518",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.65,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "seiryu",
+      "variant": 1,
+      "lod": "high",
+      "file": "models/m1/seiryu-1-high.glb",
+      "bytes": 217056,
+      "triangles": 7004,
+      "boundsMin": [
+        -0.5666593313217163,
+        0.0,
+        -0.5263839364051819
+      ],
+      "boundsMax": [
+        0.6489057540893555,
+        1.350000023841858,
+        0.5298493504524231
+      ],
+      "animations": [],
+      "sha256": "07a46ec2da2a1051245055a91cbdf979333503b410184cdc5cb359586edfba05",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.65,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "seiryu",
+      "variant": 1,
+      "lod": "low",
+      "file": "models/m1/seiryu-1-low.glb",
+      "bytes": 36824,
+      "triangles": 1080,
+      "boundsMin": [
+        -0.5516477823257446,
+        0.0,
+        -0.5098297595977783
+      ],
+      "boundsMax": [
+        0.6495968699455261,
+        1.350000023841858,
+        0.5298939347267151
+      ],
+      "animations": [],
+      "sha256": "2e5883b63d0572d58e788b3753ef226dc58f17955aa609fd8103736684f35f5b",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.65,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "seiryu",
+      "variant": 2,
+      "lod": "high",
+      "file": "models/m1/seiryu-2-high.glb",
+      "bytes": 218156,
+      "triangles": 7003,
+      "boundsMin": [
+        -0.6498091816902161,
+        0.0,
+        -0.2944416403770447
+      ],
+      "boundsMax": [
+        0.5840303301811218,
+        1.350000023841858,
+        0.29619911313056946
+      ],
+      "animations": [],
+      "sha256": "e0755fc70b49572c2fdc0e95727464cc00a2f408a31a4a7d57d66e603e60f420",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.65,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "seiryu",
+      "variant": 2,
+      "lod": "low",
+      "file": "models/m1/seiryu-2-low.glb",
+      "bytes": 36824,
+      "triangles": 1080,
+      "boundsMin": [
+        -0.6499999761581421,
+        0.0,
+        -0.3002147972583771
+      ],
+      "boundsMax": [
+        0.6129441857337952,
+        1.350000023841858,
+        0.303768128156662
+      ],
+      "animations": [],
+      "sha256": "3e6313962b291489e05f762bcb42c454ba220dad9173cee38ac2bfa406bd2f54",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.65,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "dragon",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/dragon-0-high.glb",
+      "bytes": 217008,
+      "triangles": 7004,
+      "boundsMin": [
+        -0.5481439232826233,
+        0.0,
+        -0.33928969502449036
+      ],
+      "boundsMax": [
+        0.565972626209259,
+        1.0499999523162842,
+        0.3310226500034332
+      ],
+      "animations": [],
+      "sha256": "f1ff4a1528b498f3cb1deac56d72dd40ed62b3ba3a7680d2f3466664f5da69c6",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.57,
+        "height": 1.05,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "dragon",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/dragon-0-low.glb",
+      "bytes": 36824,
+      "triangles": 1080,
+      "boundsMin": [
+        -0.5554925799369812,
+        0.0,
+        -0.34452128410339355
+      ],
+      "boundsMax": [
+        0.5658971071243286,
+        1.0499999523162842,
+        0.3264366686344147
+      ],
+      "animations": [],
+      "sha256": "42dec1403b898101991933d6ec280b38b1ee7a83d904c6b1a06d7067e58746c6",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.57,
+        "height": 1.05,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "dragon",
+      "variant": 1,
+      "lod": "high",
+      "file": "models/m1/dragon-1-high.glb",
+      "bytes": 215320,
+      "triangles": 7003,
+      "boundsMin": [
+        -0.4895082116127014,
+        0.0,
+        -0.457254022359848
+      ],
+      "boundsMax": [
+        0.561876118183136,
+        1.0499999523162842,
+        0.4490361511707306
+      ],
+      "animations": [],
+      "sha256": "e43bbf1cfd5f88c72809a30f4a5df0f7d5b3ad138b17d945dd175ce8fecc2459",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.57,
+        "height": 1.05,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "dragon",
+      "variant": 1,
+      "lod": "low",
+      "file": "models/m1/dragon-1-low.glb",
+      "bytes": 36824,
+      "triangles": 1080,
+      "boundsMin": [
+        -0.4724384844303131,
+        0.0,
+        -0.4544827342033386
+      ],
+      "boundsMax": [
+        0.5625200867652893,
+        1.0499999523162842,
+        0.434188574552536
+      ],
+      "animations": [],
+      "sha256": "7da203adf1a9a56918824e2fb7215aee981f6ceafe01c30fd9fd8b3215ebeb62",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.57,
+        "height": 1.05,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "dragon",
+      "variant": 2,
+      "lod": "high",
+      "file": "models/m1/dragon-2-high.glb",
+      "bytes": 216768,
+      "triangles": 7004,
+      "boundsMin": [
+        -0.5698332190513611,
+        0.0,
+        -0.26974448561668396
+      ],
+      "boundsMax": [
+        0.5076837539672852,
+        1.0499999523162842,
+        0.26835396885871887
+      ],
+      "animations": [],
+      "sha256": "b59a5c0635ef95aafeab8d037e2789a2d5c4164bee5116c8c1b38f19ff3a5930",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.57,
+        "height": 1.05,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "dragon",
+      "variant": 2,
+      "lod": "low",
+      "file": "models/m1/dragon-2-low.glb",
+      "bytes": 36824,
+      "triangles": 1080,
+      "boundsMin": [
+        -0.5699999928474426,
+        0.0,
+        -0.2712271809577942
+      ],
+      "boundsMax": [
+        0.5005791783332825,
+        1.0499999523162842,
+        0.26567819714546204
+      ],
+      "animations": [],
+      "sha256": "09387153876aa325c82012e7d775f22cb5f6e18052bdd9a8723534b6982ab759",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 0.57,
+        "height": 1.05,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "spider",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/spider-0-high.glb",
+      "bytes": 281332,
+      "triangles": 8680,
+      "boundsMin": [
+        -1.0667741298675537,
+        0.0,
+        -0.9184895753860474
+      ],
+      "boundsMax": [
+        1.1306729316711426,
+        1.350000023841858,
+        0.8497983813285828
+      ],
+      "animations": [],
+      "sha256": "637013e3507bbe02bfcb971a61efc1d2e3c8d6c1f72ceab7315e01ccd74a19dc",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 1.2,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "spider",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/spider-0-low.glb",
+      "bytes": 86948,
+      "triangles": 2492,
+      "boundsMin": [
+        -1.0667526721954346,
+        0.0,
+        -0.9184550642967224
+      ],
+      "boundsMax": [
+        1.1305830478668213,
+        1.350000023841858,
+        0.8498027920722961
+      ],
+      "animations": [],
+      "sha256": "00c62b88b486c4916bdba34e3e867a06d4dde6938b73baa2b151266cf897397a",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 1.2,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "spider",
+      "variant": 1,
+      "lod": "high",
+      "file": "models/m1/spider-1-high.glb",
+      "bytes": 281332,
+      "triangles": 8680,
+      "boundsMin": [
+        -0.9149217009544373,
+        0.0,
+        -0.8027244210243225
+      ],
+      "boundsMax": [
+        1.1198461055755615,
+        1.350000023841858,
+        0.8740670084953308
+      ],
+      "animations": [],
+      "sha256": "0ffe988527500843c32b29da34f1213279e2f871ae9a3b6402f7d3641f131d97",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 1.2,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "spider",
+      "variant": 1,
+      "lod": "low",
+      "file": "models/m1/spider-1-low.glb",
+      "bytes": 86948,
+      "triangles": 2492,
+      "boundsMin": [
+        -0.9146227240562439,
+        0.0,
+        -0.8026881814002991
+      ],
+      "boundsMax": [
+        1.1198855638504028,
+        1.350000023841858,
+        0.8740965723991394
+      ],
+      "animations": [],
+      "sha256": "639463d7bf1f5933eaed2296343d65ea3c1e8a6b3fcb8037d8e91e91d7fb89da",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 1.2,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "spider",
+      "variant": 2,
+      "lod": "high",
+      "file": "models/m1/spider-2-high.glb",
+      "bytes": 281332,
+      "triangles": 8680,
+      "boundsMin": [
+        -0.9904203414916992,
+        0.0,
+        -0.8062165379524231
+      ],
+      "boundsMax": [
+        1.1942893266677856,
+        1.350000023841858,
+        1.0374151468276978
+      ],
+      "animations": [],
+      "sha256": "c8abe40ecfdc9badadbc2a480ad64188d1f0ad376fbd98327bb1ac1e5ebe36b6",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 1.2,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "spider",
+      "variant": 2,
+      "lod": "low",
+      "file": "models/m1/spider-2-low.glb",
+      "bytes": 86948,
+      "triangles": 2492,
+      "boundsMin": [
+        -0.9903613328933716,
+        0.0,
+        -0.8061811923980713
+      ],
+      "boundsMax": [
+        1.1942603588104248,
+        1.350000023841858,
+        1.037345051765442
+      ],
+      "animations": [],
+      "sha256": "e7282b4eda09fb80b28e9692b8d3640aae87f0f75cff61728142adbac0f04c50",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "collision": {
+        "shape": "conservative-cylinder",
+        "radius": 1.2,
+        "height": 1.35,
+        "scaledBy": "placedObject.scale"
+      }
+    },
+    {
+      "id": "monte",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/monte-0-high.glb",
+      "bytes": 11952,
+      "triangles": 280,
+      "boundsMin": [
+        -0.41462621092796326,
+        0,
+        -0.03398885577917099
+      ],
+      "boundsMax": [
+        0.41462621092796326,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "7521d72d3ce0940242eb1478ba19ee8a62a13bd8c9d8c6633a47a2148b946d79",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "monte",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/monte-0-low.glb",
+      "bytes": 4676,
+      "triangles": 62,
+      "boundsMin": [
+        -0.409320205450058,
+        0,
+        -0.03398885577917099
+      ],
+      "boundsMax": [
+        0.409320205450058,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "ad247aa2a4744cf95befa5861dbaf2fbd533b5c75ca51307ddcb593922f7dacd",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "monte",
+      "variant": 1,
+      "lod": "high",
+      "file": "models/m1/monte-1-high.glb",
+      "bytes": 11952,
+      "triangles": 280,
+      "boundsMin": [
+        -0.44124191999435425,
+        0,
+        -0.03718242421746254
+      ],
+      "boundsMax": [
+        0.44124191999435425,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "b791446cd95ffd00bc62b29d53479fe21f7a742f157fb64a65b24b855703002d",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "monte",
+      "variant": 1,
+      "lod": "low",
+      "file": "models/m1/monte-1-low.glb",
+      "bytes": 4680,
+      "triangles": 62,
+      "boundsMin": [
+        -0.44124191999435425,
+        0,
+        -0.02961166761815548
+      ],
+      "boundsMax": [
+        0.44124191999435425,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "95c2d8b6e63e028655f9ac12ea5218fa418281205ed3888e045c869f9cc35a2f",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "monte",
+      "variant": 2,
+      "lod": "high",
+      "file": "models/m1/monte-2-high.glb",
+      "bytes": 11948,
+      "triangles": 280,
+      "boundsMin": [
+        -0.4657367765903473,
+        0,
+        -0.041288360953330994
+      ],
+      "boundsMax": [
+        0.4657367765903473,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "ccffdfe73437a6e7fd08902833961a356299b1c97bc8a6d993e47cccd230228c",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "monte",
+      "variant": 2,
+      "lod": "low",
+      "file": "models/m1/monte-2-low.glb",
+      "bytes": 4680,
+      "triangles": 62,
+      "boundsMin": [
+        -0.4657367765903473,
+        0,
+        -0.038707148283720016
+      ],
+      "boundsMax": [
+        0.4657367765903473,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "d5bbbed6eeb1e792a7e0e450ac07a788e5a9d54a3cb6e8c395f6562084dc79df",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "rotala",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/rotala-0-high.glb",
+      "bytes": 11956,
+      "triangles": 280,
+      "boundsMin": [
+        -0.1556384563446045,
+        0,
+        -0.03398885577917099
+      ],
+      "boundsMax": [
+        0.1556384563446045,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "ad3c0dda0bbf7f53a15a914050a1e499441dcda94c6cd795ec2b41b14fefd27d",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "rotala",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/rotala-0-low.glb",
+      "bytes": 4684,
+      "triangles": 62,
+      "boundsMin": [
+        -0.1547430008649826,
+        0,
+        -0.03398885577917099
+      ],
+      "boundsMax": [
+        0.1547430008649826,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "75ed89117ce2836da6e4744d7bad235a180ab149fa0b62b28a644a418b495ea5",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "rotala",
+      "variant": 1,
+      "lod": "high",
+      "file": "models/m1/rotala-1-high.glb",
+      "bytes": 11960,
+      "triangles": 280,
+      "boundsMin": [
+        -0.16681097447872162,
+        0,
+        -0.03718242421746254
+      ],
+      "boundsMax": [
+        0.16681097447872162,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "72ea4fbe8a9d604580d3e79bb8202a6b75e6f133f05abe6504e3735a5b94338a",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "rotala",
+      "variant": 1,
+      "lod": "low",
+      "file": "models/m1/rotala-1-low.glb",
+      "bytes": 4688,
+      "triangles": 62,
+      "boundsMin": [
+        -0.16681097447872162,
+        0,
+        -0.02961166761815548
+      ],
+      "boundsMax": [
+        0.16681097447872162,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "2147696fa27a82f55a7e9e31a1e5a6ba59671abd6a26ee7f9bf2953c8be53bd2",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "rotala",
+      "variant": 2,
+      "lod": "high",
+      "file": "models/m1/rotala-2-high.glb",
+      "bytes": 11960,
+      "triangles": 280,
+      "boundsMin": [
+        -0.17607121169567108,
+        0,
+        -0.041288360953330994
+      ],
+      "boundsMax": [
+        0.17607121169567108,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "6cd305b821f904467796beb94ddbe42bff5c6759ecde27a0c20e2151c9f6000b",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "rotala",
+      "variant": 2,
+      "lod": "low",
+      "file": "models/m1/rotala-2-low.glb",
+      "bytes": 4688,
+      "triangles": 62,
+      "boundsMin": [
+        -0.17607121169567108,
+        0,
+        -0.038707148283720016
+      ],
+      "boundsMax": [
+        0.17607121169567108,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "b44d2d318b47c81707d75b04a07d003012fee08e34ba76bbf9415bf15ed4b2ba",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "substrate"
+      }
+    },
+    {
+      "id": "anubias",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/anubias-0-high.glb",
+      "bytes": 11964,
+      "triangles": 280,
+      "boundsMin": [
+        -0.3227900266647339,
+        0,
+        -0.03398885577917099
+      ],
+      "boundsMax": [
+        0.3227900266647339,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "e0fba4509207e3848a029edcd23a3a15c9a918477d6fccf590d1d175f00e5cdc",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "hardscape-or-substrate"
+      }
+    },
+    {
+      "id": "anubias",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/anubias-0-low.glb",
+      "bytes": 4692,
+      "triangles": 62,
+      "boundsMin": [
+        -0.3194694221019745,
+        0,
+        -0.03398885577917099
+      ],
+      "boundsMax": [
+        0.3194694221019745,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "64865ea389085bf44184dd5e43c9cd3ee1dc1003a216962cf6ff4ece2676cf3c",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "hardscape-or-substrate"
+      }
+    },
+    {
+      "id": "anubias",
+      "variant": 1,
+      "lod": "high",
+      "file": "models/m1/anubias-1-high.glb",
+      "bytes": 11968,
+      "triangles": 280,
+      "boundsMin": [
+        -0.34438395500183105,
+        0,
+        -0.03718242421746254
+      ],
+      "boundsMax": [
+        0.34438395500183105,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "903b902d0cc766d2e73113954294cc46040aa81289ad8589c9db9e12dca72add",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "hardscape-or-substrate"
+      }
+    },
+    {
+      "id": "anubias",
+      "variant": 1,
+      "lod": "low",
+      "file": "models/m1/anubias-1-low.glb",
+      "bytes": 4696,
+      "triangles": 62,
+      "boundsMin": [
+        -0.34438395500183105,
+        0,
+        -0.02961166761815548
+      ],
+      "boundsMax": [
+        0.34438395500183105,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "bbdaa52db8dbaa266b4f31868592b510d4aab37b6adbd348d631920fc2d85c5b",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "hardscape-or-substrate"
+      }
+    },
+    {
+      "id": "anubias",
+      "variant": 2,
+      "lod": "high",
+      "file": "models/m1/anubias-2-high.glb",
+      "bytes": 11964,
+      "triangles": 280,
+      "boundsMin": [
+        -0.3635018765926361,
+        0,
+        -0.041288360953330994
+      ],
+      "boundsMax": [
+        0.3635018765926361,
+        1,
+        0.11055401712656021
+      ],
+      "animations": [],
+      "sha256": "bbf0b796cbfa317421f7ddc9ba8862526ca5f388ca3ecef869a339b96f71dc08",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "hardscape-or-substrate"
+      }
+    },
+    {
+      "id": "anubias",
+      "variant": 2,
+      "lod": "low",
+      "file": "models/m1/anubias-2-low.glb",
+      "bytes": 4696,
+      "triangles": 62,
+      "boundsMin": [
+        -0.3635018765926361,
+        0,
+        -0.038707148283720016
+      ],
+      "boundsMax": [
+        0.3635018765926361,
+        1,
+        0.10999999940395355
+      ],
+      "animations": [],
+      "sha256": "e257c80683986a196f6867c70b1bf4996ae496fdcb80f967a185f620eebb9c11",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "ground-center"
+      },
+      "placement": {
+        "role": "instanced-leaf-module",
+        "drivenBy": [
+          "bio.stage",
+          "bio.height",
+          "bio.spread",
+          "bio.branches",
+          "bio.runners"
+        ],
+        "surface": "hardscape-or-substrate"
+      }
+    },
+    {
+      "id": "betta",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/betta-0-high.glb",
+      "bytes": 235748,
+      "triangles": 4108,
+      "boundsMin": [
+        -0.5,
+        -0.28999999165534973,
+        -0.12552577257156372
+      ],
+      "boundsMax": [
+        0.5,
+        0.2395264208316803,
+        0.1344742327928543
+      ],
+      "animations": [
+        "Swim"
+      ],
+      "sha256": "e24b1d945b2d113fcfc968a55242d7f3db927efd85e5867e5b4a50fe7ab1b2b3",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "animal-center"
+      },
+      "collision": {
+        "shape": "conservative-sphere",
+        "radiusFormula": "max(0.045, life.lengthCm * 0.065 + 0.025)",
+        "visualLength": "life.lengthCm / 10"
+      }
+    },
+    {
+      "id": "betta",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/betta-0-low.glb",
+      "bytes": 83952,
+      "triangles": 1300,
+      "boundsMin": [
+        -0.5,
+        -0.28999999165534973,
+        -0.12552577257156372
+      ],
+      "boundsMax": [
+        0.5,
+        0.2395264208316803,
+        0.1344742327928543
+      ],
+      "animations": [
+        "Swim"
+      ],
+      "sha256": "5ee25b4b3f94315c41d5f1e460eb74c2b91cee23b5ba81a84f070e449ec8f978",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "animal-center"
+      },
+      "collision": {
+        "shape": "conservative-sphere",
+        "radiusFormula": "max(0.045, life.lengthCm * 0.065 + 0.025)",
+        "visualLength": "life.lengthCm / 10"
+      }
+    },
+    {
+      "id": "shrimp",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/shrimp-0-high.glb",
+      "bytes": 224112,
+      "triangles": 3826,
+      "boundsMin": [
+        -0.5,
+        0.0008839625515975058,
+        -0.2501237392425537
+      ],
+      "boundsMax": [
+        0.5001742243766785,
+        0.15504662692546844,
+        0.25011909008026123
+      ],
+      "animations": [
+        "Swim"
+      ],
+      "sha256": "668bc2709c8ebfb4ceb674bb5c380083a7a2e50206312c3d14aae63005648ab5",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "animal-center"
+      },
+      "collision": {
+        "shape": "conservative-sphere",
+        "radiusFormula": "max(0.045, life.lengthCm * 0.065 + 0.025)",
+        "visualLength": "life.lengthCm / 10"
+      }
+    },
+    {
+      "id": "shrimp",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/shrimp-0-low.glb",
+      "bytes": 100744,
+      "triangles": 1602,
+      "boundsMin": [
+        -0.5,
+        0.0008839625515975058,
+        -0.2501237392425537
+      ],
+      "boundsMax": [
+        0.5001742243766785,
+        0.15504662692546844,
+        0.25011909008026123
+      ],
+      "animations": [
+        "Swim"
+      ],
+      "sha256": "97a34b710568422fd16ba753751cfb4c605e8e314a7488f719a3be04fcb6e5a0",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "animal-center"
+      },
+      "collision": {
+        "shape": "conservative-sphere",
+        "radiusFormula": "max(0.045, life.lengthCm * 0.065 + 0.025)",
+        "visualLength": "life.lengthCm / 10"
+      }
+    },
+    {
+      "id": "neon",
+      "variant": 0,
+      "lod": "high",
+      "file": "models/m1/neon-0-high.glb",
+      "bytes": 230608,
+      "triangles": 4068,
+      "boundsMin": [
+        -0.5,
+        -0.12999999523162842,
+        -0.12552577257156372
+      ],
+      "boundsMax": [
+        0.5,
+        0.17499999701976776,
+        0.1344742327928543
+      ],
+      "animations": [
+        "Swim"
+      ],
+      "sha256": "03fc1d906c6bfdf72707c4fb700564c10b21a9c682240ff51c57d8254694e010",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "animal-center"
+      },
+      "collision": {
+        "shape": "conservative-sphere",
+        "radiusFormula": "max(0.045, life.lengthCm * 0.065 + 0.025)",
+        "visualLength": "life.lengthCm / 10"
+      }
+    },
+    {
+      "id": "neon",
+      "variant": 0,
+      "lod": "low",
+      "file": "models/m1/neon-0-low.glb",
+      "bytes": 80316,
+      "triangles": 1260,
+      "boundsMin": [
+        -0.5,
+        -0.12999999523162842,
+        -0.12552577257156372
+      ],
+      "boundsMax": [
+        0.5,
+        0.17499999701976776,
+        0.1344742327928543
+      ],
+      "animations": [
+        "Swim"
+      ],
+      "sha256": "4985b7c9e6d1b9b8b9ca434fd27c91602fbc4ad9de2b88143d7c91cdfff54811",
+      "scale": {
+        "units": "1 game unit = 10 cm",
+        "up": "+Y",
+        "forward": "+X",
+        "origin": "animal-center"
+      },
+      "collision": {
+        "shape": "conservative-sphere",
+        "radiusFormula": "max(0.045, life.lengthCm * 0.065 + 0.025)",
+        "visualLength": "life.lengthCm / 10"
+      }
+    }
+  ],
+  "textures": [
+    {
+      "file": "models/m1/anubias-leaf-base.webp",
+      "bytes": 2272,
+      "sha256": "b4122c7a01c70b3ca91517bef82ae9cfdfe75b9cd2fe78918974727750495e9d",
+      "dimensions": [
+        256,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/anubias-leaf-normal.png",
+      "bytes": 4544,
+      "sha256": "b7d3a763b51007e259c3c6b75b6e8a0efe2882306412f94034b5c3226da9333d",
+      "dimensions": [
+        128,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/anubias-leaf-rough.png",
+      "bytes": 11884,
+      "sha256": "a5bdb0a640d613dfc4ac3b3768e0433d49fe6fc7fa78c2fe25603a963ddc1922",
+      "dimensions": [
+        128,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/betta-skin-base.webp",
+      "bytes": 33262,
+      "sha256": "2510867964e0fe8ca371bfc401883e893f449cbd1eccc4d07c4c5ac70c7dbc36",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/betta-skin-normal.png",
+      "bytes": 17521,
+      "sha256": "c969e1cefacd6abe0b456e90132ec41a19761f4293af87a1ffc4e7377e89ad07",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/betta-skin-rough.png",
+      "bytes": 356,
+      "sha256": "1a27a9c595995a4f4780ca490893c83b4bb3b7ff49249887607238f1c39e2a31",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/dragon-0-base.webp",
+      "bytes": 37674,
+      "sha256": "f16a24c0b6f2d257a79375ff92616491b7ebf4bd1daa1d22d4757a36c4a0bb8a",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/dragon-0-normal.png",
+      "bytes": 36576,
+      "sha256": "94cc35383259a28946958b1e7d32122afa319ddf9eb35a4128ad32dae12c8463",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/dragon-0-rough.png",
+      "bytes": 17058,
+      "sha256": "8e8409a13339f271054b416b7b9de8f6c95063f7ab684aff4733f39373a0b79d",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/dragon-1-base.webp",
+      "bytes": 37788,
+      "sha256": "463f0a7bd6e89bc48c09f66fc9e5604624b57d2e5005c57242bf94b82aa557f7",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/dragon-1-normal.png",
+      "bytes": 36632,
+      "sha256": "b0287b5d66804fc85fdc5797b6080b8634c927f5b7fec4b43cdbef7854d7da03",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/dragon-1-rough.png",
+      "bytes": 17120,
+      "sha256": "9e562df10386c8c434792fc6bdef92cae98b04d760b123a931d9d070533dc485",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/dragon-2-base.webp",
+      "bytes": 37832,
+      "sha256": "147e02d9e8de89843837c2c9db499b207fb3447529680847f5c6769130520038",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/dragon-2-normal.png",
+      "bytes": 36606,
+      "sha256": "6e9e87d47af7f3ee3990911e28771af1f6a7cf732b6ab4a028db8796e897963e",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/dragon-2-rough.png",
+      "bytes": 17107,
+      "sha256": "18921542bd37389752c1a5cd35ba064ac8468214a3b5cb5f4b62cc4105ef2df7",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/monte-leaf-base.webp",
+      "bytes": 3608,
+      "sha256": "34cf5740c64439f752b39a01e09cd8ed461a659363508742618f2f9dac57befb",
+      "dimensions": [
+        256,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/monte-leaf-normal.png",
+      "bytes": 4544,
+      "sha256": "b7d3a763b51007e259c3c6b75b6e8a0efe2882306412f94034b5c3226da9333d",
+      "dimensions": [
+        128,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/monte-leaf-rough.png",
+      "bytes": 11884,
+      "sha256": "a5bdb0a640d613dfc4ac3b3768e0433d49fe6fc7fa78c2fe25603a963ddc1922",
+      "dimensions": [
+        128,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/neon-skin-base.webp",
+      "bytes": 15910,
+      "sha256": "ea83172a2c0627ebf8030f372987a35bcd0d1299e28ab2426a3c95c11d0e84fe",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/neon-skin-normal.png",
+      "bytes": 17521,
+      "sha256": "c969e1cefacd6abe0b456e90132ec41a19761f4293af87a1ffc4e7377e89ad07",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/neon-skin-rough.png",
+      "bytes": 356,
+      "sha256": "1a27a9c595995a4f4780ca490893c83b4bb3b7ff49249887607238f1c39e2a31",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/rotala-leaf-base.webp",
+      "bytes": 2666,
+      "sha256": "4b1f0be77ea8298818432f5b47ee4257bcbc0fae5cb789405d11b680c5930cd7",
+      "dimensions": [
+        256,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/rotala-leaf-normal.png",
+      "bytes": 4544,
+      "sha256": "b7d3a763b51007e259c3c6b75b6e8a0efe2882306412f94034b5c3226da9333d",
+      "dimensions": [
+        128,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/rotala-leaf-rough.png",
+      "bytes": 11884,
+      "sha256": "a5bdb0a640d613dfc4ac3b3768e0433d49fe6fc7fa78c2fe25603a963ddc1922",
+      "dimensions": [
+        128,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-0-base.webp",
+      "bytes": 51778,
+      "sha256": "1265e21bae14133c2870314003c2c9e94b35817b929a88d311b8747b976e2cff",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-0-normal.png",
+      "bytes": 42190,
+      "sha256": "570e3badf1b5dc002b639138a0034eae3ae9f38bcc41c61d68590fd088455ec0",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-0-rough.png",
+      "bytes": 19981,
+      "sha256": "9d6e83c683d9ff345222e19588fb759c4fbac2f286fd75aafdc2c409bc7d3563",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-1-base.webp",
+      "bytes": 51404,
+      "sha256": "a18c62d7813ce7350a2bd2b17ae54068f234b14cf0684656dc0b0fb3a9c2f194",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-1-normal.png",
+      "bytes": 42369,
+      "sha256": "f313e4aa7b48b332d405e24ec51eefa6f942e58350e57c2ab62bd46b1ba5efa4",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-1-rough.png",
+      "bytes": 20125,
+      "sha256": "7d277c2faf23a107042145b0f678f8d987aa90c9284b4e46253d7e60f3f972e8",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-2-base.webp",
+      "bytes": 52406,
+      "sha256": "b3e84b24111b06d865615d295ef72148e37c1b44e55a6ebcad39777aa508f219",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-2-normal.png",
+      "bytes": 42139,
+      "sha256": "30158e4349681724bb013e13c8879fe07af586e5d859a9890940c9d8cd465148",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/seiryu-2-rough.png",
+      "bytes": 19931,
+      "sha256": "9ba92b62490b70996e63cd8251b6a0daf6d2938460bbb393ae692eea07c3524c",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/shrimp-skin-base.webp",
+      "bytes": 67102,
+      "sha256": "517783c27fd210c177b46799f44c42452d14aa4e77e7f1f926912eefeb68062c",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/shrimp-skin-normal.png",
+      "bytes": 17521,
+      "sha256": "c969e1cefacd6abe0b456e90132ec41a19761f4293af87a1ffc4e7377e89ad07",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/shrimp-skin-rough.png",
+      "bytes": 356,
+      "sha256": "bfbf470880d92e5f404f24303816b1bf0082becaefbba889f4d3e9f074b951af",
+      "dimensions": [
+        256,
+        128
+      ]
+    },
+    {
+      "file": "models/m1/spider-grain-base.webp",
+      "bytes": 13364,
+      "sha256": "36eda9926938454249dd3d935da03215f0335fbb6b6f4b2cf7edac07c9f1ac5c",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "models/m1/spider-grain-normal.png",
+      "bytes": 80668,
+      "sha256": "61d824e8b9d89d870af3c82969ff0787c107cada8af832904fef07af589112c5",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "models/m1/spider-grain-rough.png",
+      "bytes": 34332,
+      "sha256": "e9f2ff4b5d1a47cb64bb5ebb834eadeffadee9b40e8892941fb28db7107cc53b",
+      "dimensions": [
+        256,
+        256
+      ]
+    }
+  ],
+  "compression": "WebP base color, lossless PNG normal/roughness; no GPU block compression claim",
+  "sources": {
+    "tools/m1/build_assets.py": "6596ede23f4541f32b5b03f4fc30283f7bdec59619047e3a41ee155b2e7ebff0",
+    "tools/m1/pack_assets.py": "6f5fb5707b00545c0f5e636e35b1976c6240d7cc30a8a8b5cc7dd16b3194c526"
+  }
+}

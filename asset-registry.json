@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceHash": "1eb065763751939f1aaaf4bbcb5fa7df1be0b753cc490fe2a21d89e6956ef5e8",
-  "license": "Original procedural models and generated previews. No third-party assets.",
+  "sourceHash": "27de442b9ee0b8d5d9a78d80bc1acccf09a265c8c64cb45a7a9a60f538df2fb7",
+  "license": "M1 authored GLB assets CC0-1.0; remaining assets original procedural fallback. See ASSET_LICENSES.md.",
   "assets": [
     {
       "id": "seiryu",
@@ -12,15 +12,15 @@
       "size": 0.65,
       "height": 1.35,
       "description": "Vân đá xám lạnh, những đường nứt phong hóa.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/seiryu-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         1.3,
         1.35,
         1.3
       ],
       "preview": "previews/seiryu-0.webp",
-      "status": "procedural-fallback",
+      "status": "authored-glb",
       "variants": 3,
       "placement": {
         "surface": "substrate",
@@ -32,11 +32,20 @@
         "metalness": 0
       },
       "performance": {
-        "triangles": 4000,
+        "triangles": 7004,
         "drawCalls": 1,
         "instanced": false,
-        "previewTriangles": 180,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
+      },
+      "modelSpec": {
+        "kind": "hardscape",
+        "variants": 3,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "source": "tools/m1/build_assets.py"
       }
     },
     {
@@ -48,15 +57,15 @@
       "size": 0.57,
       "height": 1.05,
       "description": "Đá nâu ấm với bề mặt gồ ghề tự nhiên.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/dragon-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         1.14,
         1.05,
         1.14
       ],
       "preview": "previews/dragon-0.webp",
-      "status": "procedural-fallback",
+      "status": "authored-glb",
       "variants": 3,
       "placement": {
         "surface": "substrate",
@@ -68,11 +77,20 @@
         "metalness": 0
       },
       "performance": {
-        "triangles": 4000,
+        "triangles": 7004,
         "drawCalls": 1,
         "instanced": false,
-        "previewTriangles": 180,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
+      },
+      "modelSpec": {
+        "kind": "hardscape",
+        "variants": 3,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "source": "tools/m1/build_assets.py"
       }
     },
     {
@@ -108,7 +126,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 180,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -144,7 +163,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 180,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -180,7 +200,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 180,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -216,7 +237,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 180,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -228,15 +250,15 @@
       "size": 0.8,
       "height": 1.35,
       "description": "Những nhánh mảnh vươn lên như bộ rễ.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/spider-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         2.4000000000000004,
         1.35,
         2.4000000000000004
       ],
       "preview": "previews/spider-0.webp",
-      "status": "procedural-fallback",
+      "status": "authored-glb",
       "variants": 3,
       "placement": {
         "surface": "substrate",
@@ -248,11 +270,20 @@
         "metalness": 0
       },
       "performance": {
-        "triangles": 4000,
+        "triangles": 8680,
         "drawCalls": 1,
         "instanced": false,
-        "previewTriangles": 1296,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
+      },
+      "modelSpec": {
+        "kind": "hardscape",
+        "variants": 3,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "source": "tools/m1/build_assets.py"
       }
     },
     {
@@ -288,7 +319,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 1008,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -324,7 +356,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 1296,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -360,7 +393,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 1008,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -396,7 +430,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 864,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -408,16 +443,16 @@
       "size": 0.24,
       "height": 0.12,
       "description": "Thảm lá nhỏ. Cần đèn và CO₂ vừa đủ.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/monte-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         0.48,
         0.12,
         0.48
       ],
       "preview": "previews/monte-0.webp",
-      "status": "procedural-fallback",
-      "variants": 1,
+      "status": "authored-glb",
+      "variants": 3,
       "placement": {
         "surface": "substrate",
         "zone": "Tiền cảnh"
@@ -428,11 +463,11 @@
         "metalness": 0
       },
       "performance": {
-        "triangles": 2000,
-        "drawCalls": 1,
+        "triangles": 280,
+        "drawCalls": 3,
         "instanced": true,
-        "previewTriangles": 1200,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
       },
       "plant": {
         "habit": "carpet",
@@ -449,7 +484,16 @@
       "light": 60,
       "co2": 55,
       "growthRate": 0.22,
-      "zone": "Tiền cảnh"
+      "zone": "Tiền cảnh",
+      "modelSpec": {
+        "kind": "leaf-module",
+        "variants": 3,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "source": "tools/m1/build_assets.py"
+      }
     },
     {
       "id": "hairgrass",
@@ -484,7 +528,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 1320,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "grass",
@@ -535,7 +580,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 888,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "carpet",
@@ -586,7 +632,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 1536,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "carpet",
@@ -613,16 +660,16 @@
       "size": 0.3,
       "height": 0.35,
       "description": "Lá dày, phát triển chậm. Có thể gắn đá/lũa.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/anubias-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         0.6,
         0.35,
         0.6
       ],
       "preview": "previews/anubias-0.webp",
-      "status": "procedural-fallback",
-      "variants": 1,
+      "status": "authored-glb",
+      "variants": 3,
       "placement": {
         "surface": "hardscape-or-substrate",
         "zone": "Bám đá / lũa"
@@ -633,11 +680,11 @@
         "metalness": 0
       },
       "performance": {
-        "triangles": 2000,
-        "drawCalls": 1,
+        "triangles": 280,
+        "drawCalls": 3,
         "instanced": true,
-        "previewTriangles": 456,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
       },
       "plant": {
         "habit": "rhizome",
@@ -655,7 +702,16 @@
       "co2": 20,
       "growthRate": 0.09,
       "attachment": true,
-      "zone": "Bám đá / lũa"
+      "zone": "Bám đá / lũa",
+      "modelSpec": {
+        "kind": "leaf-module",
+        "variants": 3,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "source": "tools/m1/build_assets.py"
+      }
     },
     {
       "id": "buce",
@@ -690,7 +746,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 408,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "rhizome",
@@ -742,7 +799,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 600,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "rosette",
@@ -793,7 +851,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 600,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "rhizome",
@@ -846,7 +905,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 840,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "stem",
@@ -873,16 +933,16 @@
       "size": 0.24,
       "height": 1.2,
       "description": "Cây thân đốt, ngọn hồng khi đủ ánh sáng.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/rotala-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         0.48,
         1.2,
         0.48
       ],
       "preview": "previews/rotala-0.webp",
-      "status": "procedural-fallback",
-      "variants": 1,
+      "status": "authored-glb",
+      "variants": 3,
       "placement": {
         "surface": "substrate",
         "zone": "Hậu cảnh"
@@ -893,11 +953,11 @@
         "metalness": 0
       },
       "performance": {
-        "triangles": 2000,
-        "drawCalls": 1,
+        "triangles": 280,
+        "drawCalls": 3,
         "instanced": true,
-        "previewTriangles": 1368,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
       },
       "plant": {
         "habit": "stem",
@@ -914,7 +974,16 @@
       "light": 65,
       "co2": 60,
       "growthRate": 0.28,
-      "zone": "Hậu cảnh"
+      "zone": "Hậu cảnh",
+      "modelSpec": {
+        "kind": "leaf-module",
+        "variants": 3,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "source": "tools/m1/build_assets.py"
+      }
     },
     {
       "id": "rotala-hra",
@@ -949,7 +1018,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 1368,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "stem",
@@ -1000,7 +1070,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 672,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "grass",
@@ -1052,7 +1123,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 1032,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "stem",
@@ -1103,7 +1175,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 885,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "moss",
@@ -1156,7 +1229,8 @@
         "drawCalls": 1,
         "instanced": true,
         "previewTriangles": 1392,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "plant": {
         "habit": "moss",
@@ -1184,15 +1258,15 @@
       "size": 0.11,
       "height": 0.08,
       "description": "Cá đàn ánh xanh. Nên nuôi ít nhất 6 con.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/neon-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         0.22,
         0.08,
         0.22
       ],
       "preview": "previews/neon-0.webp",
-      "status": "procedural-fallback",
+      "status": "authored-glb",
       "variants": 1,
       "placement": {
         "surface": "water",
@@ -1204,11 +1278,11 @@
         "metalness": 0.12
       },
       "performance": {
-        "triangles": 2200,
-        "drawCalls": 2,
+        "triangles": 4068,
+        "drawCalls": 1,
         "instanced": true,
-        "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
       },
       "fish": {
         "body": [
@@ -1229,7 +1303,17 @@
         "maturityDays": 60,
         "hungerPerDay": 23
       },
-      "latin": "Paracheirodon innesi"
+      "latin": "Paracheirodon innesi",
+      "modelSpec": {
+        "kind": "morph-animal",
+        "variants": 1,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "animation": "Swim",
+        "source": "tools/m1/build_assets.py"
+      }
     },
     {
       "id": "cardinal",
@@ -1264,7 +1348,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1320,7 +1405,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1376,7 +1462,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1432,7 +1519,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1488,7 +1576,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1544,7 +1633,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 780,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1576,15 +1666,15 @@
       "size": 0.18,
       "height": 0.18,
       "description": "Thân chắc và các vây mềm rủ; bơi chậm tầng trên.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/betta-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         0.36,
         0.18,
         0.36
       ],
       "preview": "previews/betta-0.webp",
-      "status": "procedural-fallback",
+      "status": "authored-glb",
       "variants": 1,
       "placement": {
         "surface": "water",
@@ -1596,11 +1686,11 @@
         "metalness": 0.12
       },
       "performance": {
-        "triangles": 2200,
-        "drawCalls": 2,
+        "triangles": 4108,
+        "drawCalls": 1,
         "instanced": true,
-        "previewTriangles": 782,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
       },
       "fish": {
         "body": [
@@ -1621,7 +1711,17 @@
         "maturityDays": 90,
         "hungerPerDay": 24
       },
-      "latin": "Betta splendens"
+      "latin": "Betta splendens",
+      "modelSpec": {
+        "kind": "morph-animal",
+        "variants": 1,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "animation": "Swim",
+        "source": "tools/m1/build_assets.py"
+      }
     },
     {
       "id": "cory",
@@ -1656,7 +1756,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 940,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1712,7 +1813,8 @@
         "drawCalls": 2,
         "instanced": true,
         "previewTriangles": 900,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       },
       "fish": {
         "body": [
@@ -1744,15 +1846,15 @@
       "size": 0.08,
       "height": 0.04,
       "description": "Tìm thức ăn sát nền, góp phần gặm rêu.",
-      "model": null,
-      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "model": "models/m1/shrimp-0-high.glb",
+      "license": "Original Aquascape M1 authored game art, CC0-1.0; tools/m1/build_assets.py",
       "bounds": [
         0.16,
         0.04,
         0.16
       ],
       "preview": "previews/shrimp-0.webp",
-      "status": "procedural-fallback",
+      "status": "authored-glb",
       "variants": 1,
       "placement": {
         "surface": "water",
@@ -1764,11 +1866,11 @@
         "metalness": 0.12
       },
       "performance": {
-        "triangles": 2200,
-        "drawCalls": 2,
+        "triangles": 3826,
+        "drawCalls": 1,
         "instanced": true,
-        "previewTriangles": 2054,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": false,
+        "previewSource": "actual GLB WebGL render"
       },
       "fish": {
         "body": [
@@ -1789,7 +1891,17 @@
         "maturityDays": 75,
         "hungerPerDay": 15
       },
-      "latin": "Neocaridina davidi"
+      "latin": "Neocaridina davidi",
+      "modelSpec": {
+        "kind": "morph-animal",
+        "variants": 1,
+        "lods": [
+          "low",
+          "high"
+        ],
+        "animation": "Swim",
+        "source": "tools/m1/build_assets.py"
+      }
     },
     {
       "id": "feeder",
@@ -1824,7 +1936,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 12,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -1860,7 +1973,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 12,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -1896,7 +2010,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 12,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -1932,7 +2047,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 12,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     },
     {
@@ -1968,7 +2084,8 @@
         "drawCalls": 1,
         "instanced": false,
         "previewTriangles": 12,
-        "trianglesAreBudget": true
+        "trianglesAreBudget": true,
+        "previewSource": "procedural fallback triangle projection"
       }
     }
   ]
