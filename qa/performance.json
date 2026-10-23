@@ -1,0 +1,19 @@
+{
+  "quality": "low",
+  "platform": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "viewport": [
+      1280,
+      900
+    ],
+    "devicePixelRatio": 1,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  },
+  "samples": [
+    "6 fps · 175.9 ms · 51 calls · 78,108 tris · 3 tex",
+    "7 fps · 134.7 ms · 51 calls · 78,108 tris · 3 tex",
+    "7 fps · 150.4 ms · 51 calls · 78,108 tris · 3 tex",
+    "7 fps · 147.7 ms · 51 calls · 78,108 tris · 3 tex"
+  ],
+  "note": "Cloud software rendering only; no physical-device FPS claim."
+}

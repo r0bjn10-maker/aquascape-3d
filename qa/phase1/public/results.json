@@ -1,0 +1,282 @@
+{
+  "url": "https://r0bjn10-maker.github.io/aquascape-3d/",
+  "verifiedUtc": "2026-10-23T00:24:38.836Z",
+  "transport": "TLS-verified Playwright route.fetch; platform CA trusted by Node. Service workers blocked; no physical-device or live PWA claim.",
+  "results": [
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "deployed HTML matches local build",
+        "welcome reachable and WebGL renders",
+        "care actions update the saved aquarium",
+        "JSON export/import and reload preserve the layout"
+      ],
+      "errors": [],
+      "requests": [
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "small-phone",
+      "width": 360,
+      "height": 640,
+      "checks": [
+        "deployed HTML matches local build",
+        "welcome reachable and WebGL renders",
+        "care actions update the saved aquarium",
+        "JSON export/import and reload preserve the layout"
+      ],
+      "errors": [],
+      "requests": [
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "landscape",
+      "width": 844,
+      "height": 390,
+      "checks": [
+        "deployed HTML matches local build",
+        "welcome reachable and WebGL renders",
+        "care actions update the saved aquarium",
+        "JSON export/import and reload preserve the layout"
+      ],
+      "errors": [],
+      "requests": [
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "small-landscape",
+      "width": 640,
+      "height": 360,
+      "checks": [
+        "deployed HTML matches local build",
+        "welcome reachable and WebGL renders",
+        "care actions update the saved aquarium",
+        "JSON export/import and reload preserve the layout"
+      ],
+      "errors": [],
+      "requests": [
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "checks": [
+        "deployed HTML matches local build",
+        "welcome reachable and WebGL renders",
+        "care actions update the saved aquarium",
+        "JSON export/import and reload preserve the layout"
+      ],
+      "errors": [],
+      "requests": [
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/?quality=low",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-C1kjoAjt.css",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/index-qpkKKSK2.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200
+        },
+        {
+          "url": "https://r0bjn10-maker.github.io/aquascape-3d/icon.svg",
+          "status": 200
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "showcase-medium",
+    "width": 1280,
+    "height": 900,
+    "quality": "medium",
+    "errors": [],
+    "metrics": "1 fps · 724.5 ms · 82 calls · 124,785 tris · 5 tex"
+  },
+  {
+    "name": "catalog-phone",
+    "width": 390,
+    "height": 844,
+    "quality": "low",
+    "errors": [],
+    "metrics": "12 fps · 80.8 ms · 51 calls · 78,108 tris · 3 tex"
+  }
+]

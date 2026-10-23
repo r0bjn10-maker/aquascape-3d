@@ -1,0 +1,85 @@
+{
+  "version": "2.1.0",
+  "schema": 2,
+  "sourceSha256": "196301904174e3dd3c29c4106c93d8ce7571d7fdba0934441cbc63196357d8e8",
+  "unitTests": {
+    "passed": 65,
+    "failed": 0
+  },
+  "browserTests": {
+    "developmentPassed": 8,
+    "productionPassed": 1,
+    "failed": 0
+  },
+  "checks": [
+    "typecheck",
+    "lint",
+    "production build",
+    "offline PWA repository subpath",
+    "CPU offline benchmark"
+  ],
+  "benchmarks": [
+    {
+      "days": 1,
+      "elapsedMs": 56.237855000000025,
+      "steps": 1440,
+      "processedSeconds": 86400,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 2,
+      "retainedEvents": 2
+    },
+    {
+      "days": 7,
+      "elapsedMs": 206.86349199999995,
+      "steps": 10080,
+      "processedSeconds": 604800,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 14,
+      "retainedEvents": 14
+    },
+    {
+      "days": 30,
+      "elapsedMs": 785.300357,
+      "steps": 43200,
+      "processedSeconds": 2592000,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 60,
+      "retainedEvents": 40
+    },
+    {
+      "days": 90,
+      "elapsedMs": 2345.2652639999997,
+      "steps": 129600,
+      "processedSeconds": 7776000,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 180,
+      "retainedEvents": 40
+    }
+  ],
+  "visualGrowth": {
+    "beforeTriangles": 115932,
+    "afterTriangles": 144612,
+    "beforeLengthCm": 1.26,
+    "afterLengthCm": 2.940164691903915
+  },
+  "publication": {
+    "url": "https://r0bjn10-maker.github.io/aquascape-3d/",
+    "repository": "r0bjn10-maker/aquascape-3d",
+    "branch": "gh-pages",
+    "commit": "33ab128714d80d4eed6d6182c8390819497f6e03",
+    "deploymentRun": 39859320996,
+    "status": "success",
+    "publicSmoke": "qa/public-deployment.json"
+  },
+  "limitations": [
+    "procedural assets",
+    "no physical iOS/Windows device testing",
+    "software WebGL only",
+    "Web Locks required for writing",
+    "catch-up runs synchronously on CPU"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "beforeStageTransition": 51380,
+  "afterStageTransition": 59820,
+  "note": "Actual renderer triangles increased after fixed-step plant growth."
+}

@@ -1,0 +1,10 @@
+import { it,expect } from 'vitest';
+import { createWorld } from '../data/initial';
+import { advanceSimulation,REAL_DAY,createClock } from '../game/simulation/realTime';
+import { useGame } from '../state/store';
+import { parseSave } from '../persistence/save';
+it('preview is isolated from primary world and reports actual deltas',()=>{const s=useGame.getState();s.newGame('sample');const before=structuredClone(useGame.getState().world);s.previewDays(7);const state=useGame.getState();expect(state.world).toEqual(before);expect(state.preview!.state).not.toEqual(before);const r=state.preview!.report;expect(r.after.plantBiomass-r.before.plantBiomass).toBeCloseTo(state.preview!.state.objects.filter(p=>p.bio).reduce((n,p)=>n+p.biomass,0)-before.objects.filter(p=>p.bio).reduce((n,p)=>n+p.biomass,0));s.set({preview:null});});
+it('care changes settle the prior partial minute without replay',()=>{const s=useGame.getState();s.newGame('fresh');s.set({world:advanceSimulation(useGame.getState().world,31).state});s.changeCare('relaxed');expect(useGame.getState().world.clock.remainderSeconds).toBe(0);expect(useGame.getState().world.seconds).toBe(31);});
+it('current schema export/import retains biology, schedules and UTC exactly',()=>{const w=advanceSimulation(createWorld(),7*REAL_DAY,{offline:true}).state;expect(parseSave(JSON.stringify(w))).toEqual(w);});
+it('reports contain no random values and no more than three care recommendations',()=>{const w=createWorld();w.clock=createClock(0);w.equipment.filter=false;w.equipment.feeder=false;const a=advanceSimulation(w,7*REAL_DAY,{offline:true}),b=advanceSimulation(w,7*REAL_DAY,{offline:true});expect(a.report).toEqual(b.report);expect(a.report.recommendations.length).toBeLessThanOrEqual(3);});
+it('retains the existing healthy-growth achievement exactly once',()=>{const w=createWorld();for(const p of w.objects)if(p.bio)p.growth=.9;const a=advanceSimulation(w,120).state,b=advanceSimulation(a,120).state;expect(a.achievements).toContain('healthy');expect(a.coins).toBe(w.coins+200);expect(b.coins).toBe(a.coins);});

@@ -1,0 +1,42 @@
+import { useState,useEffect } from 'react';
+import { useGame,visibleWorld } from '../state/store';
+import { AquariumScene,metrics } from '../game/scene/AquariumScene';
+import { Camera,Maximize,Leaf,Fish,Layers,Settings2,SlidersHorizontal,Heart,Coins,Undo2,Redo2,MousePointer2,Play,Pause,ChevronRight,Check,Droplets,Wind,Sun } from 'lucide-react';
+import { Shop } from '../ui/Shop';
+import { Inspector } from '../ui/Inspector';
+import { Welcome } from '../ui/Welcome';
+import { Menu } from '../ui/Menu';
+import { healthScore } from '../game/simulation/ecosystem';
+import { Runtime } from '../game/simulation/Runtime';
+import { setAmbience } from '../game/audio/ambience';
+import { REAL_DAY } from '../game/simulation/realTime';
+import { effectiveLight } from '../game/simulation/automation';
+import { WelcomeBack,TimeLapse } from '../ui/Living';
+const tasks=[['terrain','Thiết kế địa hình'],['rocks','Đặt 3 viên đá'],['plants','Trồng 5 cụm cây'],['filter','Lắp hệ lọc'],['fish','Thả đàn cá đầu tiên'],['healthy','Nuôi dưỡng cây khỏe']] as const;
+export default function App(){
+  const s=useGame(),{camera,set,zen}=s,world=visibleWorld(s),[menu,setMenu]=useState(false),[stats,setStats]=useState({...metrics}),[showTasks,setTasks]=useState(false),[audio,setAudio]=useState(false);
+  useEffect(()=>{const timer=setInterval(()=>setStats({...metrics}),2000);return ()=>clearInterval(timer);},[]);
+  useEffect(()=>{if(!zen&&audio){setAmbience(false);setAudio(false);}},[zen,audio]);
+  useEffect(()=>{if(!s.notice)return;const id=setTimeout(()=>useGame.getState().set({notice:''}),5000);return ()=>clearTimeout(id);},[s.notice]);
+  useEffect(()=>{const handler=(e:KeyboardEvent)=>{if((e.target as HTMLElement).matches('input,select,textarea'))return;const g=useGame.getState();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();g.history(e.shiftKey?'redo':'undo');}else if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();g.save();}else if(e.key==='Escape'){g.set({tool:'select',placing:null,selected:null,zen:false});setMenu(false);}else if(e.key==='Delete'||e.key==='Backspace'){e.preventDefault();g.remove();}};window.addEventListener('keydown',handler);return ()=>window.removeEventListener('keydown',handler);},[]);
+  return <main className={(zen?'app zen':'app')+(s.panel?' has-panel':'')+(s.preview?' is-preview':'')+(s.session==='readonly'?' is-readonly':'')+(!s.started?' intro':'')}>
+    <Runtime/>{s.session==='loading'&&<div className="session-cover">Đang mở hồ an toàn…</div>}{s.session==='readonly'&&<div className="session-banner">Tab chỉ xem: hồ đang được giữ bởi tab khác. <button onClick={()=>location.reload()}>Thử lại</button></div>}
+    <header><a className="brand" href="./"><span className="brand-mark">a</span><span>AQUASCAPE<small>MY LIVING AQUARIUM</small></span></a><div className="tank-title"><span className="live-dot"/> {world.name}<span className="tag">60P · 64,8 L</span></div><div className="header-actions"><span className="balance"><Coins size={15}/>{world.mode==='creative'?'∞':world.coins.toLocaleString('vi-VN')}<small>xu</small></span><span className="health"><Heart size={15}/>{healthScore(world)}<small>/100</small></span><button className="icon-button" aria-label="Menu và cài đặt" onClick={()=>setMenu(true)}><SlidersHorizontal size={18}/></button></div></header>
+    <section className="stage"><AquariumScene/>{stats.calls===0&&<div className="loading-note" role="status">Đang dựng hồ 3D…</div>}<div className="scene-caption"><span>01 / NATURE AQUARIUM</span><h1>Một góc thiên nhiên.<br/><em>Một chút bình yên.</em></h1><p>{s.panel?'Tạo nên bố cục mang dấu ấn của bạn.':'Thung lũng xanh · Hồ thủy sinh nước ngọt'}</p></div>
+      <Welcome/>{s.started&&<><Shop/>{s.tool==='select'&&<Inspector/>}<div className="water-hud" aria-label="Chỉ số hồ"><div><Droplets size={13}/><span>Độ trong</span><b>{Math.round(world.water.clarity)}<small>/100</small></b></div><div><Wind size={13}/><span>Oxy</span><b>{Math.round(world.water.oxygen)}<small>/100</small></b></div><div><Sun size={13}/><span>Đèn</span><b>{Math.round(effectiveLight(world))}<small>%</small></b></div><p>CHỈ SỐ MÔ PHỎNG</p></div><div className="scene-facts"><span><Leaf size={14}/>{world.objects.filter(o=>['monte','anubias','fern','rotala','vallis','moss'].includes(o.asset)).length} cụm cây</span><span><Fish size={14}/>{world.animals.filter(f=>f.life.alive).length} sinh vật</span></div>
+      <nav className="tool-dock" aria-label="Công cụ thiết kế">{(['layout','plants','fish','equipment','care'] as const).map((panel,i)=>{const Icon=[Layers,Leaf,Fish,Settings2,Heart][i];return <button key={panel} className={s.panel===panel?'active':''} onClick={()=>set({panel:s.panel===panel?null:panel})}><Icon size={19}/><span>{['Bố cục','Cây','Sinh vật','Thiết bị','Chăm sóc'][i]}</span></button>;})}</nav>
+      <div className="edit-controls"><button title="Chọn vật thể" aria-label="Chọn vật thể" className={s.tool==='select'?'active':''} onClick={()=>set({tool:'select',placing:null})}><MousePointer2 size={16}/></button><span/><button aria-label="Hoàn tác" disabled={!s.undo.length} onClick={()=>s.history('undo')}><Undo2 size={16}/></button><button aria-label="Làm lại" disabled={!s.redo.length} onClick={()=>s.history('redo')}><Redo2 size={16}/></button></div></>}
+      <nav className="camera-bar" aria-label="Góc nhìn"><Camera size={16}/>{(['front','perspective','top','orbit'] as const).map((v,i)=><button key={v} aria-label={['Mặt trước','Phối cảnh','Từ trên','Tự do'][i]} className={camera===v?'active':''} onClick={()=>set({camera:v,cameraRevision:s.cameraRevision+1})}>{['Mặt trước','Phối cảnh','Từ trên','Tự do'][i]}</button>)}<button aria-label="Chế độ Zen" title="Chế độ Zen" onClick={()=>set({zen:!zen,panel:null,selected:null,tool:'select',placing:null})}><Maximize size={15}/></button></nav>
+      {s.started&&world.mode==='creative'&&<div className="time-controls"><button aria-label={s.speed?'Tạm dừng':'Tiếp tục'} onClick={()=>set({speed:s.speed?0:1})}>{s.speed?<Pause size={13}/>:<Play size={13}/>}</button>{[1,5,20].map(n=><button key={n} className={s.speed===n?'active':''} onClick={()=>set({speed:n})}>×{n}</button>)}</div>}
+      {s.started&&world.mode==='aquarium'&&<div className="time-controls living-speed">LIVING · 1:1 · {world.clock.careMode.toUpperCase()}</div>}
+      {s.started&&<TimeLapse/>}
+    </section>
+    <footer><div><span className="live-dot"/>{healthScore(world)>=75?'Hồ đang cân bằng':'Hồ cần chăm sóc'}<span className="separator">/</span><span data-testid="game-day">Ngày {1+Math.floor(world.seconds/REAL_DAY)}</span><span className="save-status">{s.saved?'Đã lưu':'Tự động lưu'}</span></div><span>Kéo để xoay · Cuộn để thu phóng</span><label className="quality"><Settings2 size={15}/><select aria-label="Chất lượng đồ họa" value={s.quality} onChange={e=>set({quality:e.target.value as 'auto',adaptiveLow:false})}><option value="auto">Đồ họa: Tự động</option><option value="low">Thấp</option><option value="medium">Trung bình</option><option value="high">Cao</option></select></label></footer>
+    {s.started&&<button className="task-button" onClick={()=>setTasks(!showTasks)}>BƯỚC ĐẦU LÀM QUEN <b>{world.achievements.length}/6</b><ChevronRight size={13}/></button>}
+    {showTasks&&<div className="task-list panel">{tasks.map(([id,label])=><div key={id} className={world.achievements.includes(id)?'done':''}><Check size={13}/>{label}<small>+{id==='healthy'?200:75} xu</small></div>)}</div>}
+    <output className="performance" data-testid="performance" data-geometries={stats.geometries} data-textures={stats.textures} data-programs={stats.programs}>{stats.fps} fps · {stats.frameMs.toFixed(1)} ms · {stats.calls} calls · {stats.triangles.toLocaleString()} tris · {stats.textures} tex</output>
+    <WelcomeBack/>{s.offlineWarning&&<div className="clock-warning">{s.offlineWarning}</div>}
+    {s.notice&&<div className="toast" role="status">{s.notice}</div>}{menu&&<Menu close={()=>setMenu(false)}/>}
+    {zen&&<div className="zen-tools"><label>Ánh sáng<input aria-label="Ánh sáng Zen" type="range" min="5" max="100" value={world.water.light} onChange={e=>s.edit(w=>{w.water.light=+e.target.value;})}/></label><button onClick={()=>set({zenOrbit:!s.zenOrbit})}>{s.zenOrbit?'Camera chậm':'Camera cố định'}</button><button onClick={()=>{setAudio(!audio);setAmbience(!audio);}}>{audio?'Tắt âm thanh nước':'Âm thanh nước'}</button><button onClick={()=>set({zen:false})}>Thoát Zen</button></div>}
+  </main>;
+}

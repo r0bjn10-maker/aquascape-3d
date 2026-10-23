@@ -1,0 +1,1975 @@
+{
+  "version": 1,
+  "sourceHash": "1eb065763751939f1aaaf4bbcb5fa7df1be0b753cc490fe2a21d89e6956ef5e8",
+  "license": "Original procedural models and generated previews. No third-party assets.",
+  "assets": [
+    {
+      "id": "seiryu",
+      "name": "Đá Seiryu",
+      "category": "rocks",
+      "price": 90,
+      "color": "#78868a",
+      "size": 0.65,
+      "height": 1.35,
+      "description": "Vân đá xám lạnh, những đường nứt phong hóa.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        1.3,
+        1.35,
+        1.3
+      ],
+      "preview": "previews/seiryu-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "seiryu",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 180,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "dragon",
+      "name": "Đá Dragon",
+      "category": "rocks",
+      "price": 85,
+      "color": "#9b7952",
+      "size": 0.57,
+      "height": 1.05,
+      "description": "Đá nâu ấm với bề mặt gồ ghề tự nhiên.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        1.14,
+        1.05,
+        1.14
+      ],
+      "preview": "previews/dragon-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "dragon",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 180,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "lava",
+      "name": "Đá nham thạch",
+      "category": "rocks",
+      "price": 65,
+      "color": "#4b4644",
+      "size": 0.64,
+      "height": 0.8,
+      "description": "Màu tối, xốp; tương phản với thảm cây xanh.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        1.28,
+        0.8,
+        1.28
+      ],
+      "preview": "previews/lava-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "lava",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 180,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "river",
+      "name": "Đá cuội suối",
+      "category": "rocks",
+      "price": 45,
+      "color": "#99988a",
+      "size": 0.57,
+      "height": 0.42,
+      "description": "Đá tròn nhẵn cho bố cục ven suối.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        1.14,
+        0.42,
+        1.14
+      ],
+      "preview": "previews/river-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "river",
+        "roughness": 0.72,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 180,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "slate",
+      "name": "Đá Slate",
+      "category": "rocks",
+      "price": 80,
+      "color": "#666e76",
+      "size": 0.7,
+      "height": 0.55,
+      "description": "Phiến đá xếp lớp, mép mỏng và vân song song.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        1.4,
+        0.55,
+        1.4
+      ],
+      "preview": "previews/slate-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "slate",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 180,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "granite",
+      "name": "Đá Granite",
+      "category": "rocks",
+      "price": 75,
+      "color": "#a59b91",
+      "size": 0.63,
+      "height": 0.9,
+      "description": "Khối granite với hạt thạch anh và đốm khoáng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        1.26,
+        0.9,
+        1.26
+      ],
+      "preview": "previews/granite-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "granite",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 180,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "spider",
+      "name": "Lũa Spider",
+      "category": "wood",
+      "price": 120,
+      "color": "#6e4b2c",
+      "size": 0.8,
+      "height": 1.35,
+      "description": "Những nhánh mảnh vươn lên như bộ rễ.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        2.4000000000000004,
+        1.35,
+        2.4000000000000004
+      ],
+      "preview": "previews/spider-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "spider",
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 1296,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "branch",
+      "name": "Lũa cành",
+      "category": "wood",
+      "price": 110,
+      "color": "#715239",
+      "size": 0.8,
+      "height": 0.85,
+      "description": "Cành già bất đối xứng, vươn ngang mặt nền.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        2.4000000000000004,
+        0.85,
+        2.4000000000000004
+      ],
+      "preview": "previews/branch-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "branch",
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 1008,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "root",
+      "name": "Lũa gốc",
+      "category": "wood",
+      "price": 140,
+      "color": "#583b28",
+      "size": 0.85,
+      "height": 1.1,
+      "description": "Gốc lũa cổ thụ với nhiều rễ bám nền.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        2.55,
+        1.1,
+        2.55
+      ],
+      "preview": "previews/root-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "root",
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 1296,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "twisted",
+      "name": "Lũa xoắn",
+      "category": "wood",
+      "price": 155,
+      "color": "#79543a",
+      "size": 0.8,
+      "height": 1.4,
+      "description": "Thân lũa xoắn, các nhánh lệch trục và bề mặt sần.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        2.4000000000000004,
+        1.4,
+        2.4000000000000004
+      ],
+      "preview": "previews/twisted-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "twisted",
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 1008,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "arch",
+      "name": "Lũa vòm",
+      "category": "wood",
+      "price": 160,
+      "color": "#866044",
+      "size": 0.9,
+      "height": 1.35,
+      "description": "Một vòm tự nhiên với những rễ nhỏ không đối xứng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        2.7,
+        1.35,
+        2.7
+      ],
+      "preview": "previews/arch-0.webp",
+      "status": "procedural-fallback",
+      "variants": 3,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "arch",
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 864,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "monte",
+      "name": "Monte Carlo",
+      "category": "plants",
+      "price": 30,
+      "color": "#8caf45",
+      "size": 0.24,
+      "height": 0.12,
+      "description": "Thảm lá nhỏ. Cần đèn và CO₂ vừa đủ.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.48,
+        0.12,
+        0.48
+      ],
+      "preview": "previews/monte-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Tiền cảnh"
+      },
+      "material": {
+        "kind": "monte",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1200,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "carpet",
+        "leaf": "round",
+        "width": 0.36,
+        "bend": 0.08,
+        "tip": "#bfd884",
+        "leaves": 56,
+        "rate": 0.24,
+        "spread": 0.6,
+        "group": "foreground"
+      },
+      "latin": "Micranthemum tweediei",
+      "light": 60,
+      "co2": 55,
+      "growthRate": 0.22,
+      "zone": "Tiền cảnh"
+    },
+    {
+      "id": "hairgrass",
+      "name": "Dwarf Hairgrass",
+      "category": "plants",
+      "price": 30,
+      "color": "#8eaa55",
+      "size": 0.23,
+      "height": 0.32,
+      "description": "Cụm cỏ kim mảnh, tạo thảm bằng nhánh bò.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.46,
+        0.32,
+        0.46
+      ],
+      "preview": "previews/hairgrass-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Tiền cảnh"
+      },
+      "material": {
+        "kind": "hairgrass",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1320,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "grass",
+        "leaf": "needle",
+        "width": 0.018,
+        "bend": 0.15,
+        "tip": "#bad080",
+        "leaves": 62,
+        "rate": 0.22,
+        "spread": 0.48,
+        "group": "foreground"
+      },
+      "latin": "Eleocharis parvula",
+      "light": 60,
+      "co2": 45,
+      "zone": "Tiền cảnh"
+    },
+    {
+      "id": "glosso",
+      "name": "Glossostigma",
+      "category": "plants",
+      "price": 35,
+      "color": "#89ad4b",
+      "size": 0.23,
+      "height": 0.15,
+      "description": "Lá hình thìa mọc theo cặp trên thân bò thấp.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.46,
+        0.15,
+        0.46
+      ],
+      "preview": "previews/glosso-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Tiền cảnh"
+      },
+      "material": {
+        "kind": "glosso",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 888,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "carpet",
+        "leaf": "oval",
+        "width": 0.23,
+        "bend": 0.13,
+        "tip": "#b5d66c",
+        "leaves": 42,
+        "rate": 0.25,
+        "spread": 0.54,
+        "group": "foreground"
+      },
+      "latin": "Glossostigma elatinoides",
+      "light": 70,
+      "co2": 60,
+      "zone": "Tiền cảnh"
+    },
+    {
+      "id": "hc",
+      "name": "HC Cuba",
+      "category": "plants",
+      "price": 40,
+      "color": "#92b84c",
+      "size": 0.2,
+      "height": 0.08,
+      "description": "Lá tròn rất nhỏ, thảm thấp và dày.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.4,
+        0.08,
+        0.4
+      ],
+      "preview": "previews/hc-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Tiền cảnh"
+      },
+      "material": {
+        "kind": "hc",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1536,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "carpet",
+        "leaf": "round",
+        "width": 0.46,
+        "bend": 0.05,
+        "tip": "#c2e278",
+        "leaves": 72,
+        "rate": 0.19,
+        "spread": 0.52,
+        "group": "foreground"
+      },
+      "latin": "Hemianthus callitrichoides",
+      "light": 75,
+      "co2": 65,
+      "zone": "Tiền cảnh"
+    },
+    {
+      "id": "anubias",
+      "name": "Anubias nana",
+      "category": "plants",
+      "price": 45,
+      "color": "#4b7540",
+      "size": 0.3,
+      "height": 0.35,
+      "description": "Lá dày, phát triển chậm. Có thể gắn đá/lũa.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.6,
+        0.35,
+        0.6
+      ],
+      "preview": "previews/anubias-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "hardscape-or-substrate",
+        "zone": "Bám đá / lũa"
+      },
+      "material": {
+        "kind": "anubias",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 456,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "rhizome",
+        "leaf": "round",
+        "width": 0.38,
+        "bend": 0.12,
+        "tip": "#789652",
+        "leaves": 22,
+        "rate": 0.065,
+        "spread": 0.4,
+        "group": "midground"
+      },
+      "latin": "Anubias barteri var. nana",
+      "light": 30,
+      "co2": 20,
+      "growthRate": 0.09,
+      "attachment": true,
+      "zone": "Bám đá / lũa"
+    },
+    {
+      "id": "buce",
+      "name": "Bucephalandra",
+      "category": "plants",
+      "price": 65,
+      "color": "#4a7669",
+      "size": 0.23,
+      "height": 0.28,
+      "description": "Lá gợn mép, thân rễ ngắn; gắn trên hardscape.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.46,
+        0.28,
+        0.46
+      ],
+      "preview": "previews/buce-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "hardscape-or-substrate",
+        "zone": "Trung cảnh"
+      },
+      "material": {
+        "kind": "buce",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 408,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "rhizome",
+        "leaf": "crypt",
+        "width": 0.22,
+        "bend": 0.24,
+        "tip": "#779e8b",
+        "leaves": 20,
+        "rate": 0.055,
+        "spread": 0.32,
+        "group": "midground"
+      },
+      "latin": "Bucephalandra sp.",
+      "light": 30,
+      "co2": 25,
+      "attachment": true,
+      "zone": "Trung cảnh"
+    },
+    {
+      "id": "crypt",
+      "name": "Cryptocoryne Wendtii",
+      "category": "plants",
+      "price": 40,
+      "color": "#8f8955",
+      "size": 0.34,
+      "height": 0.65,
+      "description": "Lá dài gợn sóng, mọc thành hoa thị màu đồng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.68,
+        0.65,
+        0.68
+      ],
+      "preview": "previews/crypt-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Trung cảnh"
+      },
+      "material": {
+        "kind": "crypt",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 600,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "rosette",
+        "leaf": "crypt",
+        "width": 0.24,
+        "bend": 0.27,
+        "tip": "#b89964",
+        "leaves": 28,
+        "rate": 0.105,
+        "spread": 0.46,
+        "group": "midground"
+      },
+      "latin": "Cryptocoryne wendtii",
+      "light": 40,
+      "co2": 30,
+      "zone": "Trung cảnh"
+    },
+    {
+      "id": "fern",
+      "name": "Dương xỉ Java",
+      "category": "plants",
+      "price": 40,
+      "color": "#679754",
+      "size": 0.28,
+      "height": 0.7,
+      "description": "Lá dài, mềm. Hợp bóng râm, gắn đá/lũa.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.56,
+        0.7,
+        0.56
+      ],
+      "preview": "previews/fern-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "hardscape-or-substrate",
+        "zone": "Trung cảnh"
+      },
+      "material": {
+        "kind": "fern",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 600,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "rhizome",
+        "leaf": "fern",
+        "width": 0.17,
+        "bend": 0.18,
+        "tip": "#92b55e",
+        "leaves": 28,
+        "rate": 0.1,
+        "spread": 0.4,
+        "group": "midground"
+      },
+      "latin": "Microsorum pteropus",
+      "light": 35,
+      "co2": 25,
+      "growthRate": 0.12,
+      "attachment": true,
+      "zone": "Trung cảnh"
+    },
+    {
+      "id": "stauro",
+      "name": "Staurogyne Repens",
+      "category": "plants",
+      "price": 40,
+      "color": "#80a94f",
+      "size": 0.27,
+      "height": 0.36,
+      "description": "Cây thân đốt thấp với các cặp lá bầu dục.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.54,
+        0.36,
+        0.54
+      ],
+      "preview": "previews/stauro-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Trung cảnh"
+      },
+      "material": {
+        "kind": "stauro",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 840,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "stem",
+        "leaf": "oval",
+        "width": 0.31,
+        "bend": 0.13,
+        "tip": "#b5d376",
+        "leaves": 40,
+        "rate": 0.17,
+        "spread": 0.4,
+        "group": "midground"
+      },
+      "latin": "Staurogyne repens",
+      "light": 55,
+      "co2": 40,
+      "zone": "Trung cảnh"
+    },
+    {
+      "id": "rotala",
+      "name": "Rotala",
+      "category": "plants",
+      "price": 35,
+      "color": "#b37966",
+      "size": 0.24,
+      "height": 1.2,
+      "description": "Cây thân đốt, ngọn hồng khi đủ ánh sáng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.48,
+        1.2,
+        0.48
+      ],
+      "preview": "previews/rotala-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hậu cảnh"
+      },
+      "material": {
+        "kind": "rotala",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1368,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "stem",
+        "leaf": "lance",
+        "width": 0.14,
+        "bend": 0.13,
+        "tip": "#deab84",
+        "leaves": 64,
+        "rate": 0.29,
+        "spread": 0.4,
+        "group": "background"
+      },
+      "latin": "Rotala rotundifolia",
+      "light": 65,
+      "co2": 60,
+      "growthRate": 0.28,
+      "zone": "Hậu cảnh"
+    },
+    {
+      "id": "rotala-hra",
+      "name": "Rotala H'ra",
+      "category": "plants",
+      "price": 45,
+      "color": "#bb7656",
+      "size": 0.24,
+      "height": 1.35,
+      "description": "Lá hẹp mọc đối, ngọn cam hồng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.48,
+        1.35,
+        0.48
+      ],
+      "preview": "previews/rotala-hra-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hậu cảnh"
+      },
+      "material": {
+        "kind": "rotala-hra",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1368,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "stem",
+        "leaf": "lance",
+        "width": 0.095,
+        "bend": 0.16,
+        "tip": "#ec966c",
+        "leaves": 64,
+        "rate": 0.27,
+        "spread": 0.4,
+        "group": "background"
+      },
+      "latin": "Rotala rotundifolia H'ra",
+      "light": 70,
+      "co2": 65,
+      "zone": "Hậu cảnh"
+    },
+    {
+      "id": "vallis",
+      "name": "Cỏ Vallisneria",
+      "category": "plants",
+      "price": 30,
+      "color": "#68985a",
+      "size": 0.24,
+      "height": 1.7,
+      "description": "Lá ruy băng cao, đung đưa trong dòng nước.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.48,
+        1.7,
+        0.48
+      ],
+      "preview": "previews/vallis-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hậu cảnh"
+      },
+      "material": {
+        "kind": "vallis",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 672,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "grass",
+        "leaf": "strap",
+        "width": 0.038,
+        "bend": 0.3,
+        "tip": "#b0c778",
+        "leaves": 32,
+        "rate": 0.23,
+        "spread": 0.48,
+        "group": "background"
+      },
+      "latin": "Vallisneria spiralis",
+      "light": 45,
+      "co2": 35,
+      "growthRate": 0.25,
+      "zone": "Hậu cảnh"
+    },
+    {
+      "id": "ludwigia",
+      "name": "Ludwigia Repens",
+      "category": "plants",
+      "price": 40,
+      "color": "#97654e",
+      "size": 0.3,
+      "height": 1.25,
+      "description": "Lá bầu dục rộng, mặt lá xanh đồng và ngọn đỏ.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.6,
+        1.25,
+        0.6
+      ],
+      "preview": "previews/ludwigia-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "substrate",
+        "zone": "Hậu cảnh"
+      },
+      "material": {
+        "kind": "ludwigia",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1032,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "stem",
+        "leaf": "oval",
+        "width": 0.29,
+        "bend": 0.17,
+        "tip": "#d7a38c",
+        "leaves": 48,
+        "rate": 0.22,
+        "spread": 0.43,
+        "group": "background"
+      },
+      "latin": "Ludwigia repens",
+      "light": 65,
+      "co2": 50,
+      "zone": "Hậu cảnh"
+    },
+    {
+      "id": "moss",
+      "name": "Rêu Java",
+      "category": "plants",
+      "price": 25,
+      "color": "#5d803c",
+      "size": 0.3,
+      "height": 0.18,
+      "description": "Bụi rêu mịn. Có thể bám lên lũa và đá.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.6,
+        0.18,
+        0.6
+      ],
+      "preview": "previews/moss-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "hardscape-or-substrate",
+        "zone": "Bám đá / lũa"
+      },
+      "material": {
+        "kind": "moss",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 885,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "moss",
+        "leaf": "java-moss",
+        "width": 0.36,
+        "bend": 0.18,
+        "tip": "#7eaa4f",
+        "leaves": 66,
+        "rate": 0.18,
+        "spread": 0.5,
+        "group": "moss"
+      },
+      "latin": "Taxiphyllum barbieri",
+      "light": 30,
+      "co2": 20,
+      "growthRate": 0.18,
+      "attachment": true,
+      "zone": "Bám đá / lũa"
+    },
+    {
+      "id": "christmas",
+      "name": "Christmas Moss",
+      "category": "plants",
+      "price": 35,
+      "color": "#648943",
+      "size": 0.3,
+      "height": 0.2,
+      "description": "Các nhánh rêu tam giác xếp tầng như cây thông.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.6,
+        0.2,
+        0.6
+      ],
+      "preview": "previews/christmas-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "hardscape-or-substrate",
+        "zone": "Rêu"
+      },
+      "material": {
+        "kind": "christmas",
+        "roughness": 0.73,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 2000,
+        "drawCalls": 1,
+        "instanced": true,
+        "previewTriangles": 1392,
+        "trianglesAreBudget": true
+      },
+      "plant": {
+        "habit": "moss",
+        "leaf": "christmas-moss",
+        "width": 0.46,
+        "bend": 0.12,
+        "tip": "#8eaf62",
+        "leaves": 54,
+        "rate": 0.14,
+        "spread": 0.44,
+        "group": "moss"
+      },
+      "latin": "Vesicularia montagnei",
+      "light": 35,
+      "co2": 25,
+      "attachment": true,
+      "zone": "Rêu"
+    },
+    {
+      "id": "neon",
+      "name": "Neon Tetra",
+      "category": "fish",
+      "price": 25,
+      "color": "#52bbc1",
+      "size": 0.11,
+      "height": 0.08,
+      "description": "Cá đàn ánh xanh. Nên nuôi ít nhất 6 con.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.22,
+        0.08,
+        0.22
+      ],
+      "preview": "previews/neon-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "middle"
+      },
+      "material": {
+        "kind": "neon",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.12,
+          0.068
+        ],
+        "snout": 0.78,
+        "tail": "fork",
+        "color": "#a5bbb5",
+        "accent": "#20cddd",
+        "mark": "neon",
+        "dorsal": 0.1,
+        "ventral": 0.06,
+        "speed": 0.38,
+        "zone": "middle",
+        "school": true,
+        "adultCm": 3.5,
+        "maturityDays": 60,
+        "hungerPerDay": 23
+      },
+      "latin": "Paracheirodon innesi"
+    },
+    {
+      "id": "cardinal",
+      "name": "Cardinal Tetra",
+      "category": "fish",
+      "price": 30,
+      "color": "#32c7d0",
+      "size": 0.13,
+      "height": 0.08,
+      "description": "Thân thon, sọc xanh và dải đỏ dài dưới bụng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.26,
+        0.08,
+        0.26
+      ],
+      "preview": "previews/cardinal-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "middle"
+      },
+      "material": {
+        "kind": "cardinal",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.11,
+          0.057
+        ],
+        "snout": 0.82,
+        "tail": "fork",
+        "color": "#9dbeb5",
+        "accent": "#14d5df",
+        "mark": "cardinal",
+        "dorsal": 0.085,
+        "ventral": 0.055,
+        "speed": 0.36,
+        "zone": "middle",
+        "school": true,
+        "adultCm": 4.5,
+        "maturityDays": 65,
+        "hungerPerDay": 24
+      },
+      "latin": "Paracheirodon axelrodi"
+    },
+    {
+      "id": "ember",
+      "name": "Ember Tetra",
+      "category": "fish",
+      "price": 20,
+      "color": "#df9856",
+      "size": 0.1,
+      "height": 0.075,
+      "description": "Cá đàn nhỏ màu hổ phách, bơi tầng giữa.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.2,
+        0.075,
+        0.2
+      ],
+      "preview": "previews/ember-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "middle"
+      },
+      "material": {
+        "kind": "ember",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.155,
+          0.074
+        ],
+        "snout": 0.63,
+        "tail": "round",
+        "color": "#df9a4e",
+        "accent": "#edba63",
+        "mark": "ember",
+        "dorsal": 0.13,
+        "ventral": 0.085,
+        "speed": 0.27,
+        "zone": "middle",
+        "school": true,
+        "adultCm": 2.2,
+        "maturityDays": 45,
+        "hungerPerDay": 21
+      },
+      "latin": "Hyphessobrycon amandae"
+    },
+    {
+      "id": "rummy",
+      "name": "Rummy Nose Tetra",
+      "category": "fish",
+      "price": 30,
+      "color": "#c95745",
+      "size": 0.13,
+      "height": 0.08,
+      "description": "Đầu đỏ, thân bạc thon và đuôi sọc đen trắng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.26,
+        0.08,
+        0.26
+      ],
+      "preview": "previews/rummy-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "middle"
+      },
+      "material": {
+        "kind": "rummy",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.105,
+          0.059
+        ],
+        "snout": 0.94,
+        "tail": "fork",
+        "color": "#b4c1b3",
+        "accent": "#cb4d3e",
+        "mark": "rummy",
+        "dorsal": 0.095,
+        "ventral": 0.055,
+        "speed": 0.43,
+        "zone": "middle",
+        "school": true,
+        "adultCm": 4.5,
+        "maturityDays": 65,
+        "hungerPerDay": 24
+      },
+      "latin": "Petitella bleheri"
+    },
+    {
+      "id": "harlequin",
+      "name": "Harlequin Rasbora",
+      "category": "fish",
+      "price": 30,
+      "color": "#b98f72",
+      "size": 0.13,
+      "height": 0.1,
+      "description": "Thân cao màu đồng với mảng tam giác đen.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.26,
+        0.1,
+        0.26
+      ],
+      "preview": "previews/harlequin-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "middle"
+      },
+      "material": {
+        "kind": "harlequin",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.19,
+          0.076
+        ],
+        "snout": 0.62,
+        "tail": "fork",
+        "color": "#c29b81",
+        "accent": "#342f33",
+        "mark": "harlequin",
+        "dorsal": 0.15,
+        "ventral": 0.08,
+        "speed": 0.34,
+        "zone": "middle",
+        "school": true,
+        "adultCm": 4.5,
+        "maturityDays": 70,
+        "hungerPerDay": 23
+      },
+      "latin": "Trigonostigma heteromorpha"
+    },
+    {
+      "id": "chili",
+      "name": "Chili Rasbora",
+      "category": "fish",
+      "price": 25,
+      "color": "#b84838",
+      "size": 0.085,
+      "height": 0.055,
+      "description": "Thân nhỏ dài màu đỏ, sọc dọc sẫm.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.17,
+        0.055,
+        0.17
+      ],
+      "preview": "previews/chili-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "upper"
+      },
+      "material": {
+        "kind": "chili",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.074,
+          0.039
+        ],
+        "snout": 0.88,
+        "tail": "fork",
+        "color": "#b94235",
+        "accent": "#252d30",
+        "mark": "chili",
+        "dorsal": 0.07,
+        "ventral": 0.04,
+        "speed": 0.24,
+        "zone": "upper",
+        "school": true,
+        "adultCm": 2,
+        "maturityDays": 45,
+        "hungerPerDay": 19
+      },
+      "latin": "Boraras brigittae"
+    },
+    {
+      "id": "guppy",
+      "name": "Guppy",
+      "category": "fish",
+      "price": 40,
+      "color": "#d2a369",
+      "size": 0.15,
+      "height": 0.14,
+      "description": "Đuôi quạt rộng, vây lưng cao và hoa văn nổi.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.3,
+        0.14,
+        0.3
+      ],
+      "preview": "previews/guppy-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "upper"
+      },
+      "material": {
+        "kind": "guppy",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 780,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.135,
+          0.073
+        ],
+        "snout": 0.6,
+        "tail": "fan",
+        "color": "#a9a6a0",
+        "accent": "#de9b52",
+        "mark": "guppy",
+        "dorsal": 0.21,
+        "ventral": 0.1,
+        "speed": 0.26,
+        "zone": "upper",
+        "school": false,
+        "adultCm": 5,
+        "maturityDays": 75,
+        "hungerPerDay": 26
+      },
+      "latin": "Poecilia reticulata"
+    },
+    {
+      "id": "betta",
+      "name": "Betta",
+      "category": "fish",
+      "price": 65,
+      "color": "#587f9b",
+      "size": 0.18,
+      "height": 0.18,
+      "description": "Thân chắc và các vây mềm rủ; bơi chậm tầng trên.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.36,
+        0.18,
+        0.36
+      ],
+      "preview": "previews/betta-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "upper"
+      },
+      "material": {
+        "kind": "betta",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 782,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.185,
+          0.087
+        ],
+        "snout": 0.54,
+        "tail": "veil",
+        "color": "#477d98",
+        "accent": "#b74758",
+        "mark": "betta",
+        "dorsal": 0.27,
+        "ventral": 0.22,
+        "speed": 0.16,
+        "zone": "upper",
+        "school": false,
+        "adultCm": 6,
+        "maturityDays": 90,
+        "hungerPerDay": 24
+      },
+      "latin": "Betta splendens"
+    },
+    {
+      "id": "cory",
+      "name": "Corydoras",
+      "category": "fish",
+      "price": 35,
+      "color": "#afa586",
+      "size": 0.17,
+      "height": 0.1,
+      "description": "Thân giáp tròn, râu ngắn và tập tính tìm ăn sát nền.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.34,
+        0.1,
+        0.34
+      ],
+      "preview": "previews/cory-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "bottom"
+      },
+      "material": {
+        "kind": "cory",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 940,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.18,
+          0.105
+        ],
+        "snout": 0.42,
+        "tail": "paddle",
+        "color": "#b4a988",
+        "accent": "#453d36",
+        "mark": "cory",
+        "dorsal": 0.17,
+        "ventral": 0.055,
+        "speed": 0.19,
+        "zone": "bottom",
+        "school": true,
+        "adultCm": 6,
+        "maturityDays": 100,
+        "hungerPerDay": 23
+      },
+      "latin": "Corydoras paleatus"
+    },
+    {
+      "id": "oto",
+      "name": "Otocinclus",
+      "category": "fish",
+      "price": 35,
+      "color": "#a6a58d",
+      "size": 0.12,
+      "height": 0.075,
+      "description": "Miệng bám, sọc hông sẫm; gặm bề mặt gần nền.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.24,
+        0.075,
+        0.24
+      ],
+      "preview": "previews/oto-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "bottom"
+      },
+      "material": {
+        "kind": "oto",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 900,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.095,
+          0.077
+        ],
+        "snout": 0.48,
+        "tail": "fork",
+        "color": "#b6b29a",
+        "accent": "#4a4a37",
+        "mark": "oto",
+        "dorsal": 0.095,
+        "ventral": 0.045,
+        "speed": 0.17,
+        "zone": "bottom",
+        "school": false,
+        "adultCm": 4,
+        "maturityDays": 90,
+        "hungerPerDay": 19
+      },
+      "latin": "Otocinclus vittatus"
+    },
+    {
+      "id": "shrimp",
+      "name": "Tép Cherry",
+      "category": "fish",
+      "price": 15,
+      "color": "#be4c39",
+      "size": 0.08,
+      "height": 0.04,
+      "description": "Tìm thức ăn sát nền, góp phần gặm rêu.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.16,
+        0.04,
+        0.16
+      ],
+      "preview": "previews/shrimp-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "water",
+        "zone": "bottom"
+      },
+      "material": {
+        "kind": "shrimp",
+        "roughness": 0.34,
+        "metalness": 0.12
+      },
+      "performance": {
+        "triangles": 2200,
+        "drawCalls": 2,
+        "instanced": true,
+        "previewTriangles": 2054,
+        "trianglesAreBudget": true
+      },
+      "fish": {
+        "body": [
+          0.09,
+          0.055
+        ],
+        "snout": 0.7,
+        "tail": "paddle",
+        "color": "#b84d3c",
+        "accent": "#e19977",
+        "mark": "shrimp",
+        "dorsal": 0,
+        "ventral": 0,
+        "speed": 0.07,
+        "zone": "bottom",
+        "school": false,
+        "adultCm": 2.5,
+        "maturityDays": 75,
+        "hungerPerDay": 15
+      },
+      "latin": "Neocaridina davidi"
+    },
+    {
+      "id": "feeder",
+      "name": "Máy cho ăn",
+      "category": "equipment",
+      "price": 95,
+      "color": "#849fa0",
+      "size": 0.2,
+      "height": 0.2,
+      "description": "Cho ăn theo lịch, tiêu thụ kho thức ăn hữu hạn.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "preview": "previews/feeder-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "equipment",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "feeder",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 12,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "filter",
+      "name": "Lọc ngoài",
+      "category": "equipment",
+      "price": 150,
+      "color": "#849fa0",
+      "size": 0.2,
+      "height": 1,
+      "description": "Giảm chất thải; vi sinh trưởng thành dần.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.4,
+        1,
+        0.4
+      ],
+      "preview": "previews/filter-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "equipment",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "filter",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 12,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "heater",
+      "name": "Sưởi ổn nhiệt",
+      "category": "equipment",
+      "price": 80,
+      "color": "#849fa0",
+      "size": 0.1,
+      "height": 1,
+      "description": "Giữ nhiệt độ nước ở mức 24°C.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.2,
+        1,
+        0.2
+      ],
+      "preview": "previews/heater-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "equipment",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "heater",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 12,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "co2",
+      "name": "Bộ CO₂",
+      "category": "equipment",
+      "price": 120,
+      "color": "#849fa0",
+      "size": 0.1,
+      "height": 1,
+      "description": "Tăng CO₂ hỗ trợ cây; quá dư làm cá căng thẳng.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.2,
+        1,
+        0.2
+      ],
+      "preview": "previews/co2-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "equipment",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "co2",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 12,
+        "trianglesAreBudget": true
+      }
+    },
+    {
+      "id": "aerator",
+      "name": "Sủi khí",
+      "category": "equipment",
+      "price": 60,
+      "color": "#849fa0",
+      "size": 0.1,
+      "height": 0.1,
+      "description": "Cải thiện chỉ số oxy và dòng nước.",
+      "model": null,
+      "license": "Original Aquascape procedural artwork; no third-party models or textures",
+      "bounds": [
+        0.2,
+        0.1,
+        0.2
+      ],
+      "preview": "previews/aerator-0.webp",
+      "status": "procedural-fallback",
+      "variants": 1,
+      "placement": {
+        "surface": "equipment",
+        "zone": "Hardscape"
+      },
+      "material": {
+        "kind": "aerator",
+        "roughness": 0.95,
+        "metalness": 0
+      },
+      "performance": {
+        "triangles": 4000,
+        "drawCalls": 1,
+        "instanced": false,
+        "previewTriangles": 12,
+        "trianglesAreBudget": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "node": "v24.19.0",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "stepSeconds": 60,
+  "samples": [
+    {
+      "days": 1,
+      "elapsedMs": 111.19867099999999,
+      "steps": 1440,
+      "processedSeconds": 86400,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 2,
+      "retainedEvents": 2
+    },
+    {
+      "days": 7,
+      "elapsedMs": 539.032628,
+      "steps": 10080,
+      "processedSeconds": 604800,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 14,
+      "retainedEvents": 14
+    },
+    {
+      "days": 30,
+      "elapsedMs": 2133.4534969999995,
+      "steps": 43200,
+      "processedSeconds": 2592000,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 60,
+      "retainedEvents": 40
+    },
+    {
+      "days": 90,
+      "elapsedMs": 6625.700215,
+      "steps": 129600,
+      "processedSeconds": 7776000,
+      "objects": 74,
+      "animals": 18,
+      "feedings": 180,
+      "retainedEvents": 40
+    }
+  ],
+  "note": "CPU simulation only; no renderer and no claim about phone/desktop GPU FPS."
+}
